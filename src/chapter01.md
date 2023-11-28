@@ -92,7 +92,7 @@ class Gridworld:
         # Define the reward for reaching the goal or taking a step
         reward = 0 if done else -1
 
-        return self.agent_position, reward, done
+        return self.get_state(), reward, done
 
     def reset(self):
         """
@@ -103,6 +103,7 @@ class Gridworld:
         for obstacle in self.obstacles:
             self.grid[obstacle] = -1
         self.grid[self.goal] = 1
+        return self.get_state()  # Return the initial state
 
     def render(self):
         """
