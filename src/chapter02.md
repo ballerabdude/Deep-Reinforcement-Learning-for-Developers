@@ -27,15 +27,36 @@ Q-Learning is advantageous as it can handle environments with stochastic transit
 
 ### The Q-Learning Algorithm
 
-The Q-Learning algorithm updates the Q-values for each state-action pair using the Bellman equation iteratively:
-$$ Q(s, a) \leftarrow Q(s, a) + \alpha [r + \gamma \max_{a'} Q(s', a') - Q(s, a)] $$
-where:
-- \( s, a \): current state and action
-- \( s' \): next state
-- \( r \): reward received
-- \( \alpha \): learning rate
-- \( \gamma \): discount factor
-- \( a' \): possible next action
+The Q-Learning algorithm is a reinforcement learning technique used to solve Markov Decision Processes (MDPs). It learns an optimal policy by iteratively updating the Q-values of state-action pairs based on the rewards received.
+
+Algorithm Steps:
+Initialize the Q-table with zeros for all state-action pairs.
+
+Set the learning rate (alpha), discount factor (gamma), and exploration rate (epsilon).
+
+Repeat the following steps until convergence or a maximum number of episodes:
+
+a. Observe the current state (s).
+
+b. Choose an action (a) based on the current state using an exploration-exploitation strategy (e.g., epsilon-greedy).
+
+c. Perform the chosen action and observe the next state (s') and the reward (r).
+
+d. Update the Q-value of the current state-action pair using the Q-Learning update equation:
+
+Q(s, a) = (1 - alpha) * Q(s, a) + alpha * (r + gamma * max(Q(s', a')))
+e. Update the current state (s) to the next state (s').
+
+Return the learned Q-table, which represents the optimal action-value function.
+
+Parameters:
+alpha (learning rate): Determines the weight given to the new information when updating the Q-values. A higher value gives more weight to the new information.
+
+gamma (discount factor): Controls the importance of future rewards. A value closer to 1 considers long-term rewards, while a value closer to 0 focuses on immediate rewards.
+
+epsilon (exploration rate): Determines the balance between exploration and exploitation. A higher value encourages more exploration, while a lower value favors exploitation of the learned Q-values.
+
+The Q-Learning algorithm is a powerful technique for solving reinforcement learning problems. It allows an agent to learn an optimal policy by iteratively updating the Q-values based on the rewards received. By balancing exploration and exploitation, the agent can find the best actions to take in different states to maximize its cumulative reward.
 
 
 ### Coding Q-Learning Components
@@ -62,7 +83,7 @@ After taking an action, we update the Q-table entries using the Q-Learning formu
 
 #### Exploration vs. Exploitation
 
-We'll implement an &epsilon;-greedy strategy, enabling the agent to explore the environment while exploiting its current knowledge.
+We'll implement an $\epsilon$-greedy strategy, enabling the agent to explore the environment while exploiting its current knowledge.
 
 ### Enhancing the Agent with Q-Learning
 

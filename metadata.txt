@@ -2,5 +2,4 @@
 title: Deep Reinforcement Learning for Developers
 author: Abdul Hagi
 lang: en-US
-cover-image: cover.png
 ---
