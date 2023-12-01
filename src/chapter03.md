@@ -50,20 +50,14 @@ We recap the deep learning concepts introduced in this chapter and discuss their
 
 ---
 
+
 ## Implementing a Deep Q-Network (DQN) with PyTorch
+We use PyTorch to construct our DQN. The following parts detail each section of the code.
 
-We will utilize PyTorch, a widely-used deep learning framework, to create our DQN model. PyTorch offers a comprehensive and intuitive environment for constructing neural networks.
-
-### File: `gridworld_deep_q_learning.py`
+### Defining the Network Architecture
+We start by defining our neural network:
 
 ```python
-import numpy as np
-import random
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from gridworld import Gridworld  # This imports the Gridworld environment
-
 # Define the neural network architecture for Deep Q-Learning
 class SimpleMLP(nn.Module):
     # Constructor for the neural network
@@ -84,8 +78,14 @@ class SimpleMLP(nn.Module):
         x = F.relu(self.fc2(x))
         # Output layer, no activation function
         return self.fc3(x)
+```
 
-# Deep Q-Network agent class definition
+The `SimpleMLP` class represents a multilayer perceptron with layers `fc1`, `fc2`, and `fc3`.
+
+### DQN Agent Class
+Next, we have the `DQNAgent` class, controlling action selection and learning from interactions with the environment:
+
+```python
 class DQNAgent:
     # Constructor for the DQN agent
     def __init__(self, input_size, output_size, hidden_size=64):
@@ -126,8 +126,15 @@ class DQNAgent:
     def update_epsilon(self):
         if self.epsilon > self.epsilon_min:
             self.epsilon *= self.epsilon_decay
+```
 
-# Function to train the neural network model
+Here, the agent is defined with methods like `act` for decision-making and constructors for agent properties.
+
+### Training the Model
+The `train_model` function updates the network's parameters using experience replay:
+
+```python
+# Train the model based on a batch of experience
 def train_model(agent, optimizer, batch_size, gamma):
     # Check that there are enough experiences in memory to sample a batch
     if len(agent.memory) < batch_size:
@@ -157,13 +164,26 @@ def train_model(agent, optimizer, batch_size, gamma):
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
+```
 
-# Function to log the performance of the agent
+This function calculates the loss between the predicted and target Q-values and performs backpropagation to update the network weights.
+
+### Logging Agent's Performance
+Finally, a simple logging function keeps track of the agent's learning progress:
+
+```python
+# Log the performance metrics
 def log_performance(episode, total_reward, steps, epsilon):
     # Print out the episode number, total reward, number of steps and the epsilon value
     print(f"Episode: {episode}, Total Reward: {total_reward}, Steps: {steps}, Epsilon: {epsilon}")
+```
 
-# Example usage of the defined classes and functions
+This utility function prints information about the episode number, total rewards, steps, and the epsilon value.
+
+### Example Code Execution
+The main function demonstrates initializing the environment, agent, training, and logging:
+
+```python
 if __name__ == "__main__":
     # Initialize the Gridworld environment
     gridworld = Gridworld(width=5, height=5, start=(0, 0), goal=(4, 4), obstacles=[(1, 1), (2, 2), (3, 3)])
@@ -225,8 +245,13 @@ if __name__ == "__main__":
         agent.update_epsilon()
         # Log the performance metrics for the episode
         log_performance(episode, total_reward, steps, agent.epsilon)
+
 ```
 
-In this code snippet, we have outlined the creation of a simple feedforward neural network model using PyTorch for approximating Q-values in the Gridworld environment. The code includes a DQN agent that selects actions using an epsilon-greedy policy and stores experiences in a replay buffer. The `train_model` function updates the neural network's weights using sampled experiences to reduce the loss between predicted and target Q-values.
+Within each episode, the agent selects actions, updates its Q-values, and logs its performance.
+
+---
+
+In this python application, we have outlined the creation of a simple feedforward neural network model using PyTorch for approximating Q-values in the Gridworld environment. The code includes a DQN agent that selects actions using an epsilon-greedy policy and stores experiences in a replay buffer. The `train_model` function updates the neural network's weights using sampled experiences to reduce the loss between predicted and target Q-values.
 
 Please note that this example is a simplified version of DQN. For practical and more complex scenarios, additional mechanisms like experience replay buffers with more sophisticated sampling techniques and separate target networks to stabilize the Q-value predictions are recommended.

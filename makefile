@@ -22,14 +22,14 @@ RM=/bin/rm
 
 PANDOC=pandoc
 
-PANDOC_OPTIONS=markdown+smart --standalone
+PANDOC_OPTIONS=--standalone --top-level-division=chapter --number-sections --toc --toc-depth=2
 
-PANDOC_HTML_OPTIONS=--to html5
+PANDOC_HTML_OPTIONS=--to html5 --css css/html.css 
 PANDOC_PDF_OPTIONS=
 PANDOC_DOCX_OPTIONS=
 PANDOC_RTF_OPTIONS=
 PANDOC_ODT_OPTIONS=
-PANDOC_EPUB_OPTIONS=--to epub3
+PANDOC_EPUB_OPTIONS=--to epub3 --css css/epub.css 
 
 
 # Pattern-matching Rules

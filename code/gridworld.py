@@ -82,7 +82,3 @@ class Gridworld:
         """
         x, y = self.agent_position
         return y * self.width + x
-
-# Example usage
-gridworld = Gridworld(width=5, height=5, start=(0, 0), goal=(4, 4), obstacles=[(1, 1), (2, 2), (3, 3)])
-gridworld.render()

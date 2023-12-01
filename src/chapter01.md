@@ -122,10 +122,6 @@ class Gridworld:
             print()  # Newline at the end of each row
 
         print()  # Extra newline for better separation between steps
-
-# Example usage
-gridworld = Gridworld(width=5, height=5, start=(0, 0), goal=(4, 4), obstacles=[(1, 1), (2, 2), (3, 3)])
-gridworld.render()
 ```
 
 ### Summary
@@ -186,7 +182,7 @@ We introduced a simple agent to our Gridworld project. This sets the foundation 
 
 ---
 
-# Full Chapter 1: The Complete Code
+# The Complete Code:
 
 We combine the elements from Part 1 and Part 2 to run our Gridworld simulation with the RandomAgent. The code for the agent's interaction with the Gridworld is in the `gridworld_random_agent.py` file.
 

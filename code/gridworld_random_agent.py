@@ -11,15 +11,17 @@ agent = RandomAgent(actions)
 total_reward = 0
 
 # Run the agent in the environment
-for _ in range(100):  # Run for a certain number of steps or until the goal is reached
+episodes = 100
+for _ in range(episodes):  # Run for a certain number of steps or until the goal is reached
     current_state = gridworld.agent_position
     action = agent.choose_action(current_state)
     new_state, reward, done = gridworld.step(action)
     total_reward += reward
-    print(f"Action taken: {action}")
-    print(f"Reward received: {reward}")
-    print(f"Total reward: {total_reward}")
-    gridworld.render()
     if done:
         print("Goal reached!")
+        print(f"Total reward: {total_reward}")
         break
+    # if at the last step, and not done, print the total reward
+    if _ == episodes - 1 and not done:
+        print("Goal not reached!")
+        print(f"Total reward: {total_reward}")
