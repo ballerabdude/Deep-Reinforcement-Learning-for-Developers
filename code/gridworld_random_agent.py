@@ -1,5 +1,5 @@
 from gridworld import Gridworld
-from gridworld_agent import RandomAgent
+from random_agent import RandomAgent
 
 # Define the Gridworld environment
 gridworld = Gridworld(width=5, height=5, start=(0, 0), goal=(4, 4), obstacles=[(1, 1), (2, 2), (3, 3)])

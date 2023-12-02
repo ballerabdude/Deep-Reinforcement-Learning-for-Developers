@@ -192,47 +192,175 @@ perform.</li>
 environment.</li>
 <li><strong>Reward</strong>: Feedback from the environment to the
 agent.</li>
+<li><strong>Policy</strong>: The strategy that the agent employs to
+determine the next action based on the current state.</li>
+<li><strong>Value Function</strong>: A function that estimates how good
+it is for the agent to be in a given state or how good an action is,
+considering future rewards.</li>
+<li><strong>Model</strong>: The agent’s representation of the
+environment, which predicts the next state and reward for each
+action.</li>
 </ul>
-<h3 data-number="1.1.4" id="why-reinforcement-learning"><span
-class="header-section-number">1.1.4</span> Why Reinforcement
+<h3 data-number="1.1.4"
+id="expanded-key-components-of-reinforcement-learning-for-developers"><span
+class="header-section-number">1.1.4</span> Expanded Key Components of
+Reinforcement Learning for Developers</h3>
+<p>Understanding Reinforcement Learning (RL) requires a good grasp of
+its foundational elements. Here’s a more detailed look at each key
+component of RL, tailored to give developers more context and
+clarity.</p>
+<h4 data-number="1.1.4.1" id="agent"><span
+class="header-section-number">1.1.4.1</span> Agent</h4>
+<p>In the context of software, the agent is the autonomous program or
+entity you create that makes decisions. This is your RL model. As a
+developer, you’ll design the agent to interact with a given environment,
+deciding which actions to take based on input data and its current
+strategy, known as policy. The agent’s design is crucial, as it will
+determine how effectively the agent can learn and accomplish its
+goals.</p>
+<h4 data-number="1.1.4.2" id="environment"><span
+class="header-section-number">1.1.4.2</span> Environment</h4>
+<p>The environment is the world in which the agent operates. It can be a
+real-world setting or a simulated one. For developers, creating or
+choosing the right environment is essential because the agent learns
+exclusively from interacting with it. The environment provides state
+information to the agent and receives actions from it, influencing how
+the agent must behave to achieve its objectives.</p>
+<h4 data-number="1.1.4.3" id="action"><span
+class="header-section-number">1.1.4.3</span> Action</h4>
+<p>Actions are the set of operations or moves the agent can perform
+within the environment. When writing code for RL, you’ll need to define
+what actions are possible—such as moving left, buying stock, or turning
+off a switch—often represented as a finite set of choices. The agent
+selects actions in a bid to achieve the greatest cumulative reward over
+time.</p>
+<h4 data-number="1.1.4.4" id="state"><span
+class="header-section-number">1.1.4.4</span> State</h4>
+<p>The state is a description of the current situation or configuration
+of the environment. For developers, this translates to the data
+structure or object that represents the environment at a given time.
+Defining the state space is crucial, as it influences the complexity of
+the learning task—the more states there are, the more scenarios the
+agent has to consider.</p>
+<h4 data-number="1.1.4.5" id="reward"><span
+class="header-section-number">1.1.4.5</span> Reward</h4>
+<p>Rewards are feedback from the environment that evaluates the agent’s
+actions. Positive rewards reinforce good actions, while negative rewards
+discourage bad ones. As a developer, you’ll need to code the reward
+mechanism that provides this feedback to the agent. The reward structure
+you define plays a major role in shaping the agent’s behavior—over time,
+the agent learns to take actions that maximize the cumulative reward it
+receives.</p>
+<h4 data-number="1.1.4.6" id="policy"><span
+class="header-section-number">1.1.4.6</span> Policy</h4>
+<p>The policy is the algorithm or strategy that the agent uses to decide
+which action to take in a given state. It’s essentially the
+decision-making function, which you’ll need to program. In RL, policies
+can range from simple rules to complex neural networks.</p>
+<h4 data-number="1.1.4.7" id="value-function"><span
+class="header-section-number">1.1.4.7</span> Value Function</h4>
+<p>This is a prediction of the expected cumulative reward that can be
+gained from a particular state or state-action pair, guiding the agent
+toward long-term success. When writing RL code, you’ll need to implement
+mechanisms for estimating these values, which are critical in many RL
+algorithms for deciding the most rewarding paths to take.</p>
+<h4 data-number="1.1.4.8" id="model"><span
+class="header-section-number">1.1.4.8</span> Model</h4>
+<p>In some RL methods, particularly model-based approaches, you must
+also define a model that predicts how the environment will respond to
+the agent’s actions—that is, how the state transitions and what rewards
+are given. This can be seen as creating a simulation within which your
+agent can plan ahead.</p>
+<p>When developing RL applications, the code you write will incorporate
+these crucial elements. By carefully building and integrating the agent,
+environment, actions, states, rewards, policies, value functions, and
+(if used) models, you can construct an RL system capable of learning
+optimal behaviors for a wide range of problems. Remember, these
+components are interdependent: changes in one can significantly affect
+the performance of others, so careful consideration and iterative
+refinement are key to successful RL development.</p>
+<h3 data-number="1.1.5" id="why-reinforcement-learning"><span
+class="header-section-number">1.1.5</span> Why Reinforcement
 Learning?</h3>
 <p>Reinforcement learning is unique in its approach to problem-solving,
 allowing agents to learn from their own experiences rather than being
 told the correct actions. This is particularly useful in complex,
 unpredictable environments or when the desired behavior is difficult to
 express with explicit rules.</p>
-<h3 data-number="1.1.5" id="applications-of-rl"><span
-class="header-section-number">1.1.5</span> Applications of RL</h3>
+<h3 data-number="1.1.6" id="applications-of-rl"><span
+class="header-section-number">1.1.6</span> Applications of RL</h3>
+<p>Reinforcement learning has found applications in several fields, and
+its versatility is one of its most compelling features. Here is a list,
+along with how RL is implemented in these domains:</p>
 <ul>
-<li><strong>Game playing</strong>: Achieving superhuman performance in
-complex games.</li>
-<li><strong>Robotics</strong>: Teaching robots to perform tasks
-autonomously.</li>
-<li><strong>Autonomous vehicles</strong>: Driving safely and efficiently
-in dynamic environments.</li>
+<li><p><strong>Game playing</strong>: RL agents are trained to play
+complex games, such as Go or Chess, by repeatedly playing against
+themselves or simulated opponents, learning strategies that maximize
+their chances of winning.</p></li>
+<li><p><strong>Robotics</strong>: Robots use RL to learn tasks such as
+walking, grasping, or navigation by trying different motions and
+receiving feedback based on their success.</p></li>
+<li><p><strong>Autonomous vehicles</strong>: Self-driving cars and
+drones use RL to learn how to navigate and respond to dynamic conditions
+by simulating various scenarios and optimizing decisions to ensure
+safety and efficiency.</p></li>
+<li><p><strong>Healthcare</strong>: RL algorithms analyze patient data
+to develop personalized treatment and manage hospital resources by
+predicting patient flows and optimizing scheduling and
+logistics.</p></li>
+<li><p><strong>Finance</strong>: RL models market dynamics and automates
+trading strategies, adjusting in real-time to market changes and
+learning strategies that maximize long-term returns.</p></li>
+<li><p><strong>Energy</strong>: Smart grids employ RL to predict demand
+patterns and optimize energy distribution and consumption, resulting in
+cost savings and efficiency improvements.</p></li>
 </ul>
-<h3 data-number="1.1.6" id="project-overview-the-gridworld"><span
-class="header-section-number">1.1.6</span> Project Overview: The
+<p>These applications showcase the potential of RL to automate and
+enhance decision-making processes across numerous fields, leading to
+smarter and more efficient systems. By understanding how to establish
+the right environment and rewards, developers can create RL solutions
+that continuously learn and adapt to achieve desired outcomes.</p>
+<h3 data-number="1.1.7"
+id="demystifying-the-math-in-reinforcement-learning"><span
+class="header-section-number">1.1.7</span> Demystifying the Math in
+Reinforcement Learning</h3>
+<p>One common concern among developers new to reinforcement learning is
+the mathematical complexity that underlies many of the algorithms. While
+a deep understanding of the math can be beneficial, especially for
+research and advanced applications, it is not strictly necessary to get
+started with practical RL projects. The key is to focus on the concepts
+and how they can be applied.</p>
+<p>In this book, we aim to strike a balance between theory and practice.
+We will introduce mathematical concepts as necessary, but our primary
+goal is to empower you to implement and experiment with RL algorithms.
+Many of the mathematical details can be abstracted away by using modern
+machine learning frameworks, which handle the heavy lifting while you
+concentrate on designing the RL environment and tweaking the parameters
+of the learning process.</p>
+<p>Remember, complex math is a tool, not a barrier, in RL. As you become
+more comfortable with the algorithms and their implementations, the
+underlying math will become more intuitive. For the purpose of this
+chapter, we encourage you to embrace the practical aspects of RL and
+view the math as a roadmap, not a roadblock.</p>
+<h3 data-number="1.1.8" id="project-overview-the-gridworld"><span
+class="header-section-number">1.1.8</span> Project Overview: The
 Gridworld</h3>
 <p>The Gridworld is an introductory RL project where an agent must
 navigate through a grid to reach a goal while avoiding obstacles.</p>
-<h4 data-number="1.1.6.1" id="project-goal"><span
-class="header-section-number">1.1.6.1</span> Project Goal</h4>
+<h4 data-number="1.1.8.1" id="project-goal"><span
+class="header-section-number">1.1.8.1</span> Project Goal</h4>
 <p>Create an agent that finds the shortest path to a goal within a grid,
 considering obstacles.</p>
-<h4 data-number="1.1.6.2" id="key-learning"><span
-class="header-section-number">1.1.6.2</span> Key Learning</h4>
+<h4 data-number="1.1.8.2" id="key-learning"><span
+class="header-section-number">1.1.8.2</span> Key Learning</h4>
 <p>This project will teach you about the interaction between an agent
 and its environment, the role of rewards, and how to implement these
 concepts in code.</p>
-<h3 data-number="1.1.7" id="coding-the-gridworld-environment"><span
-class="header-section-number">1.1.7</span> Coding the Gridworld
+<h3 data-number="1.1.9" id="coding-the-gridworld-environment"><span
+class="header-section-number">1.1.9</span> Coding the Gridworld
 Environment</h3>
-<p>We construct a <code>Gridworld</code> class in Python to simulate the
-environment for our agent.</p>
-<ul>
-<li>File: <code>gridworld.py</code></li>
-</ul>
+<p>We construct a Gridworld class in Python to simulate the environment
+for our agent.</p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># gridworld.py</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -241,82 +369,89 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, width, height, start, goal, obstacles):</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">        Initializes a Gridworld object.</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">        Parameters:</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">        - width (int): The width of the grid.</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">        - height (int): The height of the grid.</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">        - start (tuple): The starting position of the agent as a tuple (x, y).</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">        - goal (tuple): The goal position of the agent as a tuple (x, y).</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">        - obstacles (list): A list of obstacle positions as tuples [(x1, y1), (x2, y2), ...].</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.width <span class="op">=</span> width</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.height <span class="op">=</span> height</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.start <span class="op">=</span> start</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.goal <span class="op">=</span> goal</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.obstacles <span class="op">=</span> obstacles</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.reset()</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> step(<span class="va">self</span>, action):</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">        Takes an action in the environment and updates the agent&#39;s position.</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">        Parameters:</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co">        - action (tuple): The action to be taken.</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co">        Returns:</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">        - new_state: The new state after taking the action.</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">        - reward: The reward received after taking the action.</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co">        - done: A boolean indicating if the goal has been reached.</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calculate the new position after taking the action</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>        new_x <span class="op">=</span> <span class="va">self</span>.agent_position[<span class="dv">0</span>] <span class="op">+</span> action[<span class="dv">0</span>]</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        new_y <span class="op">=</span> <span class="va">self</span>.agent_position[<span class="dv">1</span>] <span class="op">+</span> action[<span class="dv">1</span>]</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check if the new position is within the grid bounds and not an obstacle</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="dv">0</span> <span class="op">&lt;=</span> new_x <span class="op">&lt;</span> <span class="va">self</span>.width) <span class="kw">and</span> (<span class="dv">0</span> <span class="op">&lt;=</span> new_y <span class="op">&lt;</span> <span class="va">self</span>.height) <span class="kw">and</span> <span class="kw">not</span> (new_x, new_y) <span class="kw">in</span> <span class="va">self</span>.obstacles:</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Update the agent&#39;s position</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.agent_position <span class="op">=</span> (new_x, new_y)</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check if the new position is the goal</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>        done <span class="op">=</span> <span class="va">self</span>.agent_position <span class="op">==</span> <span class="va">self</span>.goal</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Define the reward for reaching the goal or taking a step</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>        reward <span class="op">=</span> <span class="dv">0</span> <span class="cf">if</span> done <span class="cf">else</span> <span class="op">-</span><span class="dv">1</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.get_state(), reward, done</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> reset(<span class="va">self</span>):</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="co">        Resets the grid and agent position to the initial state.</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.agent_position <span class="op">=</span> <span class="va">self</span>.start</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.grid <span class="op">=</span> np.zeros((<span class="va">self</span>.height, <span class="va">self</span>.width))</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> obstacle <span class="kw">in</span> <span class="va">self</span>.obstacles:</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.grid[obstacle] <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.grid[<span class="va">self</span>.goal] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.get_state()  <span class="co"># Return the initial state</span></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> render(<span class="va">self</span>):</span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="co">        Renders the current state of the gridworld.</span></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> y <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.height):</span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.width):</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> (x, y) <span class="op">==</span> <span class="va">self</span>.agent_position:</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">print</span>(<span class="st">&#39;A&#39;</span>, end<span class="op">=</span><span class="st">&#39; &#39;</span>)  <span class="co"># Agent&#39;s position</span></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>                <span class="cf">elif</span> (x, y) <span class="op">==</span> <span class="va">self</span>.goal:</span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">print</span>(<span class="st">&#39;G&#39;</span>, end<span class="op">=</span><span class="st">&#39; &#39;</span>)  <span class="co"># Goal position</span></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>                <span class="cf">elif</span> (x, y) <span class="kw">in</span> <span class="va">self</span>.obstacles:</span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">print</span>(<span class="st">&#39;#&#39;</span>, end<span class="op">=</span><span class="st">&#39; &#39;</span>)  <span class="co"># Obstacle</span></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>                <span class="cf">else</span>:</span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">print</span>(<span class="st">&#39;.&#39;</span>, end<span class="op">=</span><span class="st">&#39; &#39;</span>)  <span class="co"># Empty cell</span></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>()  <span class="co"># Newline at the end of each row</span></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>()  <span class="co"># Extra newline for better separation between steps</span></span></code></pre></div>
-<h3 data-number="1.1.8" id="summary"><span
-class="header-section-number">1.1.8</span> Summary</h3>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.width <span class="op">=</span> width  <span class="co"># Set the width of the grid</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.height <span class="op">=</span> height  <span class="co"># Set the height of the grid</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.start <span class="op">=</span> start  <span class="co"># Set the starting position of the agent</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.goal <span class="op">=</span> goal  <span class="co"># Set the goal position</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.obstacles <span class="op">=</span> obstacles  <span class="co"># Set the obstacle positions</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.agent_position <span class="op">=</span> start  <span class="co"># Initialize the agent&#39;s position</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.grid <span class="op">=</span> np.zeros((<span class="va">self</span>.height, <span class="va">self</span>.width))  <span class="co"># Initialize the grid as a 2D numpy array</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.reset()</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> get_state(<span class="va">self</span>):</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">        Returns a unique state index for the agent&#39;s current position.</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">        The method converts the 2D coordinates (x, y) of the agent&#39;s position </span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">        into a single number that uniquely identifies each possible state in the grid.</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">        This is done by using the formula &#39;y * self.width + x&#39;, which maps the 2D </span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">        coordinates to a unique 1D index. This representation is useful in algorithms </span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">        that require state representation as a single number, like many reinforcement </span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">        learning algorithms.</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        x, y <span class="op">=</span> <span class="va">self</span>.agent_position</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> y <span class="op">*</span> <span class="va">self</span>.width <span class="op">+</span> x</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> step(<span class="va">self</span>, action):</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">        Takes an action in the environment and updates the agent&#39;s position.</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calculate potential new position after the action</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        new_x <span class="op">=</span> <span class="va">self</span>.agent_position[<span class="dv">0</span>] <span class="op">+</span> action[<span class="dv">0</span>]</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        new_y <span class="op">=</span> <span class="va">self</span>.agent_position[<span class="dv">1</span>] <span class="op">+</span> action[<span class="dv">1</span>]</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check if the new position is within the grid boundaries and not an obstacle</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>        <span class="co"># The new position must be within the range of 0 and the grid&#39;s width for the x-coordinate,</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>        <span class="co"># and within the range of 0 and the grid&#39;s height for the y-coordinate.</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Additionally, the new position should not be one of the predefined obstacles.</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="dv">0</span> <span class="op">&lt;=</span> new_x <span class="op">&lt;</span> <span class="va">self</span>.width) <span class="kw">and</span> (<span class="dv">0</span> <span class="op">&lt;=</span> new_y <span class="op">&lt;</span> <span class="va">self</span>.height) <span class="kw">and</span> <span class="kw">not</span> (new_x, new_y) <span class="kw">in</span> <span class="va">self</span>.obstacles:</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.agent_position <span class="op">=</span> (new_x, new_y)  <span class="co"># Update agent&#39;s position</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check if the agent has reached the goal</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>        done <span class="op">=</span> <span class="va">self</span>.agent_position <span class="op">==</span> <span class="va">self</span>.goal</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Reward logic: 0 if goal is reached, otherwise -1. Negative rewards are used to </span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>        <span class="co"># penalize certain actions or states, encouraging the agent to reach the goal efficiently.</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>        reward <span class="op">=</span> <span class="dv">0</span> <span class="cf">if</span> done <span class="cf">else</span> <span class="op">-</span><span class="dv">1</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.get_state(), reward, done</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> reset(<span class="va">self</span>):</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="co">        Resets the grid and agent position to the initial state.</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.agent_position <span class="op">=</span> <span class="va">self</span>.start  <span class="co"># Reset agent to the start position</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.grid <span class="op">=</span> np.zeros((<span class="va">self</span>.height, <span class="va">self</span>.width))  <span class="co"># Reset the grid</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> obstacle <span class="kw">in</span> <span class="va">self</span>.obstacles:</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.grid[obstacle] <span class="op">=</span> <span class="op">-</span><span class="dv">1</span>  <span class="co"># Mark obstacles in the grid</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.grid[<span class="va">self</span>.goal] <span class="op">=</span> <span class="dv">1</span>  <span class="co"># Mark the goal in the grid</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.get_state()</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> render(<span class="va">self</span>):</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="co">        Renders the current state of the gridworld.</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> y <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.height):</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.width):</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>                <span class="co"># Print symbols for agent, goal, obstacles, or empty space</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> (x, y) <span class="op">==</span> <span class="va">self</span>.agent_position:</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">print</span>(<span class="st">&#39;A&#39;</span>, end<span class="op">=</span><span class="st">&#39; &#39;</span>)  <span class="co"># Agent&#39;s current position</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>                <span class="cf">elif</span> (x, y) <span class="op">==</span> <span class="va">self</span>.goal:</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">print</span>(<span class="st">&#39;G&#39;</span>, end<span class="op">=</span><span class="st">&#39; &#39;</span>)  <span class="co"># Goal position</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>                <span class="cf">elif</span> (x, y) <span class="kw">in</span> <span class="va">self</span>.obstacles:</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">print</span>(<span class="st">&#39;#&#39;</span>, end<span class="op">=</span><span class="st">&#39; &#39;</span>)  <span class="co"># Obstacle position</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>                <span class="cf">else</span>:</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">print</span>(<span class="st">&#39;.&#39;</span>, end<span class="op">=</span><span class="st">&#39; &#39;</span>)  <span class="co"># Empty cell</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>()  <span class="co"># New line after each row</span></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>()  <span class="co"># Additional new line for separation</span></span></code></pre></div>
+<h3 data-number="1.1.10" id="summary"><span
+class="header-section-number">1.1.10</span> Summary</h3>
 <p>This section established the basics of RL and introduced a simple
-Gridworld environment for future exploration.</p>
+Gridworld environment for future exploration. Feel free to add the
+following at the end of the file to visualize a random Gridworld:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Gridworld(width<span class="op">=</span><span class="dv">5</span>, height<span class="op">=</span><span class="dv">5</span>, start<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>), goal<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">4</span>), obstacles<span class="op">=</span>[(<span class="dv">1</span>, <span class="dv">1</span>), (<span class="dv">2</span>, <span class="dv">2</span>), (<span class="dv">3</span>, <span class="dv">3</span>)]).render()</span></code></pre></div>
 <h2 data-number="1.2" id="part-2-building-the-agent"><span
 class="header-section-number">1.2</span> Part 2: Building the Agent</h2>
 <h3 data-number="1.2.1" id="implementing-the-agent"><span
@@ -333,49 +468,56 @@ agent.</li>
 </ul>
 <h4 data-number="1.2.1.2" id="the-randomagent"><span
 class="header-section-number">1.2.1.2</span> The RandomAgent</h4>
-<p>We implement a <code>RandomAgent</code> class, which serves as our
-initial, naive agent.</p>
-<ul>
-<li>File: <code>gridworld_agent.py</code></li>
-</ul>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># gridworld_agent.py</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> RandomAgent:</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, actions):</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">        Initializes a RandomAgent object.</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">        Parameters:</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">        - actions (list): A list of possible actions the agent can take.</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.actions <span class="op">=</span> actions</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> choose_action(<span class="va">self</span>, state):</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co">        Chooses the next action at random from the list of possible actions.</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co">        Parameters:</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co">        - state: The current state of the agent (not used in this random policy).</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co">        Returns:</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co">        A randomly selected action from the agent&#39;s list of possible actions.</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> random.choice(<span class="va">self</span>.actions)</span></code></pre></div>
+<p>We implement a RandomAgent class, which serves as our initial, naive
+agent.</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># random_agent.py</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> RandomAgent:</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, actions):</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">        Initializes a RandomAgent object.</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">        Parameters:</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">        - actions (list): A list of possible actions the agent can take.</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.actions <span class="op">=</span> actions</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> choose_action(<span class="va">self</span>, state):</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co">        Chooses the next action at random from the list of possible actions.</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co">        Parameters:</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co">        - state: The current state of the agent (not used in this random policy).</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co">        Returns:</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co">        A randomly selected action from the agent&#39;s list of possible actions.</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> random.choice(<span class="va">self</span>.actions)</span></code></pre></div>
 <h4 data-number="1.2.1.3" id="agent-actions-in-gridworld"><span
 class="header-section-number">1.2.1.3</span> Agent Actions in
 Gridworld</h4>
-<p>The agent can move in four directions: up, down, left, and right.</p>
-<h4 data-number="1.2.1.4" id="interactions-and-outcomes"><span
-class="header-section-number">1.2.1.4</span> Interactions and
-Outcomes</h4>
-<p>We simulate the agent’s interactions with the Gridworld, using a
-reward system to guide its learning.</p>
-<h4 data-number="1.2.1.5" id="running-the-agent"><span
-class="header-section-number">1.2.1.5</span> Running the Agent</h4>
-<p>We execute the agent within the Gridworld, observing its behavior
-over time.</p>
+<p>The agent in the Gridworld can perform four basic actions: moving up,
+down, left, and right. These actions are represented as tuples, where
+each tuple denotes the change in the agent’s position on the grid:</p>
+<ol type="1">
+<li><p><strong>Up</strong>: To move up, the agent decreases its
+y-coordinate. This action is represented as <code>(0, -1)</code>,
+meaning there is no change in the x-coordinate, and the y-coordinate
+decreases by 1.</p></li>
+<li><p><strong>Down</strong>: To move down, the agent increases its
+y-coordinate. This action is represented as <code>(0, 1)</code>,
+indicating no change in the x-coordinate and an increase of 1 in the
+y-coordinate.</p></li>
+<li><p><strong>Left</strong>: Moving left decreases the x-coordinate.
+The action is represented as <code>(-1, 0)</code>, where the
+x-coordinate decreases by 1 and there is no change in the
+y-coordinate.</p></li>
+<li><p><strong>Right</strong>: Moving right increases the x-coordinate.
+This action is represented as <code>(1, 0)</code>, meaning the
+x-coordinate increases by 1 with no change in the y-coordinate.</p></li>
+</ol>
 <h3 data-number="1.2.2" id="summary-and-next-steps"><span
 class="header-section-number">1.2.2</span> Summary and Next Steps</h3>
 <p>We introduced a simple agent to our Gridworld project. This sets the
@@ -385,38 +527,36 @@ foundation for more advanced learning algorithms to come.</p>
 class="header-section-number">2</span> The Complete Code:</h1>
 <p>We combine the elements from Part 1 and Part 2 to run our Gridworld
 simulation with the RandomAgent. The code for the agent’s interaction
-with the Gridworld is in the <code>gridworld_random_agent.py</code>
-file.</p>
-<ul>
-<li>File: <code>gridworld_random_agent.py</code></li>
-</ul>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># gridworld_random_agent.py</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gridworld <span class="im">import</span> Gridworld</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gridworld_agent <span class="im">import</span> RandomAgent</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the Gridworld environment</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>gridworld <span class="op">=</span> Gridworld(width<span class="op">=</span><span class="dv">5</span>, height<span class="op">=</span><span class="dv">5</span>, start<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>), goal<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">4</span>), obstacles<span class="op">=</span>[(<span class="dv">1</span>, <span class="dv">1</span>), (<span class="dv">2</span>, <span class="dv">2</span>), (<span class="dv">3</span>, <span class="dv">3</span>)])</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the actions and create the RandomAgent</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>actions <span class="op">=</span> [(<span class="dv">0</span>, <span class="dv">1</span>), (<span class="dv">1</span>, <span class="dv">0</span>), (<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>), (<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>)]  <span class="co"># Actions corresponding to [Up, Right, Down, Left]</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>agent <span class="op">=</span> RandomAgent(actions)</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>total_reward <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the agent in the environment</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>):  <span class="co"># Run for a certain number of steps or until the goal is reached</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    current_state <span class="op">=</span> gridworld.agent_position</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    action <span class="op">=</span> agent.choose_action(current_state)</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    new_state, reward, done <span class="op">=</span> gridworld.step(action)</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    total_reward <span class="op">+=</span> reward</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Action taken: </span><span class="sc">{</span>action<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Reward received: </span><span class="sc">{</span>reward<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Total reward: </span><span class="sc">{</span>total_reward<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    gridworld.render()</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> done:</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;Goal reached!&quot;</span>)</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span></code></pre></div>
+with the Gridworld is in the gridworld_random_agent.py file.</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># gridworld_random_agent.py</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gridworld <span class="im">import</span> Gridworld</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random_agent <span class="im">import</span> RandomAgent</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the Gridworld environment</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>gridworld <span class="op">=</span> Gridworld(width<span class="op">=</span><span class="dv">5</span>, height<span class="op">=</span><span class="dv">5</span>, start<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>), goal<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">4</span>), obstacles<span class="op">=</span>[(<span class="dv">1</span>, <span class="dv">1</span>), (<span class="dv">2</span>, <span class="dv">2</span>), (<span class="dv">3</span>, <span class="dv">3</span>)])</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the actions and create the RandomAgent</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>actions <span class="op">=</span> [(<span class="dv">0</span>, <span class="dv">1</span>), (<span class="dv">1</span>, <span class="dv">0</span>), (<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>), (<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>)]  <span class="co"># Actions corresponding to [Up, Right, Down, Left]</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>agent <span class="op">=</span> RandomAgent(actions)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>total_reward <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the agent in the environment</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>episodes <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(episodes):  <span class="co"># Run for a certain number of steps or until the goal is reached</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    current_state <span class="op">=</span> gridworld.agent_position</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    action <span class="op">=</span> agent.choose_action(current_state)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    new_state, reward, done <span class="op">=</span> gridworld.step(action)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    total_reward <span class="op">+=</span> reward</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> done:</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;Goal reached!&quot;</span>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Total reward: </span><span class="sc">{</span>total_reward<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># if at the last step, and not done, print the total reward</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> _ <span class="op">==</span> episodes <span class="op">-</span> <span class="dv">1</span> <span class="kw">and</span> <span class="kw">not</span> done:</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;Goal not reached!&quot;</span>)</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Total reward: </span><span class="sc">{</span>total_reward<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
 <h3 data-number="2.0.1" id="why-these-actions"><span
 class="header-section-number">2.0.1</span> Why These Actions?</h3>
 <p>We selected standard grid movement actions for simplicity and to
@@ -578,111 +718,111 @@ the goal efficiently.</p>
 <hr />
 <p>Now, let’s begin our project with the
 <code>q_learning_agent.py</code> script.</p>
-<div class="sourceCode" id="cb4"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># q_learning_agent.py</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gridworld <span class="im">import</span> Gridworld</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> logging</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up logging</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>logging.basicConfig(level<span class="op">=</span>logging.INFO, <span class="bu">format</span><span class="op">=</span><span class="st">&#39;</span><span class="sc">%(asctime)s</span><span class="st"> - </span><span class="sc">%(levelname)s</span><span class="st"> - </span><span class="sc">%(message)s</span><span class="st">&#39;</span>)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>logger <span class="op">=</span> logging.getLogger()</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the Q-learning agent</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> QLearningAgent:</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, alpha, gamma, epsilon, action_space, state_space_size):</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.alpha <span class="op">=</span> alpha  <span class="co"># Learning rate</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.gamma <span class="op">=</span> gamma  <span class="co"># Discount factor</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.epsilon <span class="op">=</span> epsilon  <span class="co"># Exploration rate</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.action_space <span class="op">=</span> action_space  <span class="co"># Available actions</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.Q <span class="op">=</span> np.zeros((state_space_size, <span class="bu">len</span>(action_space)))  <span class="co"># Q-value table</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> choose_action(<span class="va">self</span>, state):</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;Choose an action using an ε-greedy policy.&quot;&quot;&quot;</span></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> random.random() <span class="op">&lt;</span> <span class="va">self</span>.epsilon:</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Randomly choose an index corresponding to an action</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> random.randint(<span class="dv">0</span>, <span class="bu">len</span>(<span class="va">self</span>.action_space) <span class="op">-</span> <span class="dv">1</span>)</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Choose the index of the action with the highest Q-value</span></span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> np.argmax(<span class="va">self</span>.Q[state])</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update_Q(<span class="va">self</span>, state, action, reward, next_state):</span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;Update the Q-value for the state-action pair using NumPy for efficient computation.&quot;&quot;&quot;</span></span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>        max_future_q <span class="op">=</span> np.<span class="bu">max</span>(<span class="va">self</span>.Q[next_state])</span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>        current_q <span class="op">=</span> <span class="va">self</span>.Q[state, action]</span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>        new_q <span class="op">=</span> (<span class="dv">1</span> <span class="op">-</span> <span class="va">self</span>.alpha) <span class="op">*</span> current_q <span class="op">+</span> <span class="va">self</span>.alpha <span class="op">*</span> (reward <span class="op">+</span> <span class="va">self</span>.gamma <span class="op">*</span> max_future_q)</span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.Q[state, action] <span class="op">=</span> new_q</span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> train(<span class="va">self</span>, env, num_episodes):</span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;Train the agent over a specified number of episodes.&quot;&quot;&quot;</span></span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>        action_space <span class="op">=</span> [(<span class="dv">0</span>, <span class="dv">1</span>), (<span class="dv">1</span>, <span class="dv">0</span>), (<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>), (<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>)]  <span class="co"># Actions: right, down, left, up</span></span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>        total_rewards <span class="op">=</span> []</span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>        steps_per_episode <span class="op">=</span> []</span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> episode <span class="kw">in</span> <span class="bu">range</span>(num_episodes):</span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>            state <span class="op">=</span> env.reset()</span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>            done <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>            total_reward <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>            steps <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> <span class="kw">not</span> done:</span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>                action_index <span class="op">=</span> <span class="va">self</span>.choose_action(state)</span>
-<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>                next_state, reward, done <span class="op">=</span> env.step(action_space[action_index])</span>
-<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.update_Q(state, action_index, reward, next_state)</span>
-<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>                state <span class="op">=</span> next_state</span>
-<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>                total_reward <span class="op">+=</span> reward</span>
-<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>                steps <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>            total_rewards.append(total_reward)</span>
-<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>            steps_per_episode.append(steps)</span>
-<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Log episode information</span></span>
-<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>            logger.info(<span class="ss">f&#39;Episode </span><span class="sc">{</span>episode <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>num_episodes<span class="sc">}</span><span class="ss"> - &#39;</span></span>
-<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>                        <span class="ss">f&#39;Total Reward: </span><span class="sc">{</span>total_reward<span class="sc">}</span><span class="ss">, &#39;</span></span>
-<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>                        <span class="ss">f&#39;Steps: </span><span class="sc">{</span>steps<span class="sc">}</span><span class="ss">, &#39;</span></span>
-<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>                        <span class="ss">f&#39;Epsilon: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>epsilon<span class="sc">:.4f}</span><span class="ss">&#39;</span>)</span>
-<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>        <span class="co"># After training, log summary statistics</span></span>
-<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>        logger.info(<span class="ss">f&#39;Training complete. Average reward per episode: </span><span class="sc">{</span>np<span class="sc">.</span>mean(total_rewards)<span class="sc">:.2f}</span><span class="ss">&#39;</span>)</span>
-<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>        logger.info(<span class="ss">f&#39;Average steps per episode: </span><span class="sc">{</span>np<span class="sc">.</span>mean(steps_per_episode)<span class="sc">:.2f}</span><span class="ss">&#39;</span>)</span>
-<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a><span class="co"># Main execution starts here</span></span>
-<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&#39;__main__&#39;</span>:</span>
-<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define the environment parameters</span></span>
-<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a>    env_params <span class="op">=</span> {</span>
-<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;width&#39;</span>: <span class="dv">5</span>,</span>
-<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;height&#39;</span>: <span class="dv">5</span>,</span>
-<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;start&#39;</span>: (<span class="dv">0</span>, <span class="dv">0</span>),</span>
-<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;goal&#39;</span>: (<span class="dv">4</span>, <span class="dv">4</span>),</span>
-<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;obstacles&#39;</span>: [(<span class="dv">1</span>, <span class="dv">1</span>), (<span class="dv">2</span>, <span class="dv">2</span>), (<span class="dv">3</span>, <span class="dv">3</span>)]</span>
-<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create the Gridworld environment</span></span>
-<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>    env <span class="op">=</span> Gridworld(<span class="op">**</span>env_params)</span>
-<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Map the actions to indices for the Q-table</span></span>
-<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a>    action_space <span class="op">=</span> [(<span class="dv">0</span>, <span class="dv">1</span>), (<span class="dv">1</span>, <span class="dv">0</span>), (<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>), (<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>)]  <span class="co"># Actions: right, down, left, up</span></span>
-<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a>    action_indices <span class="op">=</span> {action: idx <span class="cf">for</span> idx, action <span class="kw">in</span> <span class="bu">enumerate</span>(action_space)}</span>
-<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the state space size</span></span>
-<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a>    state_space_size <span class="op">=</span> env.width <span class="op">*</span> env.height</span>
-<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create the Q-learning agent with NumPy Q-table</span></span>
-<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>    agent <span class="op">=</span> QLearningAgent(alpha<span class="op">=</span><span class="fl">0.1</span>, gamma<span class="op">=</span><span class="fl">0.9</span>, epsilon<span class="op">=</span><span class="fl">0.1</span>, action_space<span class="op">=</span>action_indices, state_space_size<span class="op">=</span>state_space_size)</span>
-<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Number of episodes to train the agent</span></span>
-<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>    num_episodes <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Train the agent</span></span>
-<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a>    agent.train(env, num_episodes)</span>
-<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a>     <span class="co"># Save the trained Q-value table to a file</span></span>
-<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a>    np.savetxt(<span class="st">&#39;q_values.txt&#39;</span>, agent.Q)</span>
-<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a>    logger.info(<span class="st">&quot;Training complete. Q-values saved to q_values.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># q_learning_agent.py</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gridworld <span class="im">import</span> Gridworld</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> logging</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up logging</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>logging.basicConfig(level<span class="op">=</span>logging.INFO, <span class="bu">format</span><span class="op">=</span><span class="st">&#39;</span><span class="sc">%(asctime)s</span><span class="st"> - </span><span class="sc">%(levelname)s</span><span class="st"> - </span><span class="sc">%(message)s</span><span class="st">&#39;</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>logger <span class="op">=</span> logging.getLogger()</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the Q-learning agent</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> QLearningAgent:</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, alpha, gamma, epsilon, action_space, state_space_size):</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.alpha <span class="op">=</span> alpha  <span class="co"># Learning rate</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.gamma <span class="op">=</span> gamma  <span class="co"># Discount factor</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.epsilon <span class="op">=</span> epsilon  <span class="co"># Exploration rate</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.action_space <span class="op">=</span> action_space  <span class="co"># Available actions</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.Q <span class="op">=</span> np.zeros((state_space_size, <span class="bu">len</span>(action_space)))  <span class="co"># Q-value table</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> choose_action(<span class="va">self</span>, state):</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;Choose an action using an ε-greedy policy.&quot;&quot;&quot;</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> random.random() <span class="op">&lt;</span> <span class="va">self</span>.epsilon:</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Randomly choose an index corresponding to an action</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> random.randint(<span class="dv">0</span>, <span class="bu">len</span>(<span class="va">self</span>.action_space) <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Choose the index of the action with the highest Q-value</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> np.argmax(<span class="va">self</span>.Q[state])</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update_Q(<span class="va">self</span>, state, action, reward, next_state):</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;Update the Q-value for the state-action pair using NumPy for efficient computation.&quot;&quot;&quot;</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>        max_future_q <span class="op">=</span> np.<span class="bu">max</span>(<span class="va">self</span>.Q[next_state])</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>        current_q <span class="op">=</span> <span class="va">self</span>.Q[state, action]</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>        new_q <span class="op">=</span> (<span class="dv">1</span> <span class="op">-</span> <span class="va">self</span>.alpha) <span class="op">*</span> current_q <span class="op">+</span> <span class="va">self</span>.alpha <span class="op">*</span> (reward <span class="op">+</span> <span class="va">self</span>.gamma <span class="op">*</span> max_future_q)</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.Q[state, action] <span class="op">=</span> new_q</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> train(<span class="va">self</span>, env, num_episodes):</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;Train the agent over a specified number of episodes.&quot;&quot;&quot;</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>        action_space <span class="op">=</span> [(<span class="dv">0</span>, <span class="dv">1</span>), (<span class="dv">1</span>, <span class="dv">0</span>), (<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>), (<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>)]  <span class="co"># Actions: right, down, left, up</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>        total_rewards <span class="op">=</span> []</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>        steps_per_episode <span class="op">=</span> []</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> episode <span class="kw">in</span> <span class="bu">range</span>(num_episodes):</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>            state <span class="op">=</span> env.reset()</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>            done <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>            total_reward <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>            steps <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> <span class="kw">not</span> done:</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>                action_index <span class="op">=</span> <span class="va">self</span>.choose_action(state)</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>                next_state, reward, done <span class="op">=</span> env.step(action_space[action_index])</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.update_Q(state, action_index, reward, next_state)</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>                state <span class="op">=</span> next_state</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>                total_reward <span class="op">+=</span> reward</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>                steps <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>            total_rewards.append(total_reward)</span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>            steps_per_episode.append(steps)</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Log episode information</span></span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>            logger.info(<span class="ss">f&#39;Episode </span><span class="sc">{</span>episode <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>num_episodes<span class="sc">}</span><span class="ss"> - &#39;</span></span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>                        <span class="ss">f&#39;Total Reward: </span><span class="sc">{</span>total_reward<span class="sc">}</span><span class="ss">, &#39;</span></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>                        <span class="ss">f&#39;Steps: </span><span class="sc">{</span>steps<span class="sc">}</span><span class="ss">, &#39;</span></span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>                        <span class="ss">f&#39;Epsilon: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>epsilon<span class="sc">:.4f}</span><span class="ss">&#39;</span>)</span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>        <span class="co"># After training, log summary statistics</span></span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>        logger.info(<span class="ss">f&#39;Training complete. Average reward per episode: </span><span class="sc">{</span>np<span class="sc">.</span>mean(total_rewards)<span class="sc">:.2f}</span><span class="ss">&#39;</span>)</span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>        logger.info(<span class="ss">f&#39;Average steps per episode: </span><span class="sc">{</span>np<span class="sc">.</span>mean(steps_per_episode)<span class="sc">:.2f}</span><span class="ss">&#39;</span>)</span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a><span class="co"># Main execution starts here</span></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&#39;__main__&#39;</span>:</span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define the environment parameters</span></span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>    env_params <span class="op">=</span> {</span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;width&#39;</span>: <span class="dv">5</span>,</span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;height&#39;</span>: <span class="dv">5</span>,</span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;start&#39;</span>: (<span class="dv">0</span>, <span class="dv">0</span>),</span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;goal&#39;</span>: (<span class="dv">4</span>, <span class="dv">4</span>),</span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;obstacles&#39;</span>: [(<span class="dv">1</span>, <span class="dv">1</span>), (<span class="dv">2</span>, <span class="dv">2</span>), (<span class="dv">3</span>, <span class="dv">3</span>)]</span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create the Gridworld environment</span></span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a>    env <span class="op">=</span> Gridworld(<span class="op">**</span>env_params)</span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Map the actions to indices for the Q-table</span></span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>    action_space <span class="op">=</span> [(<span class="dv">0</span>, <span class="dv">1</span>), (<span class="dv">1</span>, <span class="dv">0</span>), (<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>), (<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>)]  <span class="co"># Actions: right, down, left, up</span></span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a>    action_indices <span class="op">=</span> {action: idx <span class="cf">for</span> idx, action <span class="kw">in</span> <span class="bu">enumerate</span>(action_space)}</span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the state space size</span></span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a>    state_space_size <span class="op">=</span> env.width <span class="op">*</span> env.height</span>
+<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create the Q-learning agent with NumPy Q-table</span></span>
+<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a>    agent <span class="op">=</span> QLearningAgent(alpha<span class="op">=</span><span class="fl">0.1</span>, gamma<span class="op">=</span><span class="fl">0.9</span>, epsilon<span class="op">=</span><span class="fl">0.1</span>, action_space<span class="op">=</span>action_indices, state_space_size<span class="op">=</span>state_space_size)</span>
+<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Number of episodes to train the agent</span></span>
+<span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a>    num_episodes <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Train the agent</span></span>
+<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a>    agent.train(env, num_episodes)</span>
+<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-101"><a href="#cb5-101" aria-hidden="true" tabindex="-1"></a>     <span class="co"># Save the trained Q-value table to a file</span></span>
+<span id="cb5-102"><a href="#cb5-102" aria-hidden="true" tabindex="-1"></a>    np.savetxt(<span class="st">&#39;q_values.txt&#39;</span>, agent.Q)</span>
+<span id="cb5-103"><a href="#cb5-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-104"><a href="#cb5-104" aria-hidden="true" tabindex="-1"></a>    logger.info(<span class="st">&quot;Training complete. Q-values saved to q_values.txt&quot;</span>)</span></code></pre></div>
 <p>This script sets up the Q-Learning agent, defines its methods, and
 runs the training process. The agent is tested in the
 <code>Gridworld</code> environment and its Q-values are saved to a file
@@ -869,27 +1009,27 @@ section of the code.</p>
 class="header-section-number">4.8.1</span> Defining the Network
 Architecture</h3>
 <p>We start by defining our neural network:</p>
-<div class="sourceCode" id="cb5"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the neural network architecture for Deep Q-Learning</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> SimpleMLP(nn.Module):</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Constructor for the neural network</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, input_size, output_size, hidden_size<span class="op">=</span><span class="dv">64</span>):</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>(SimpleMLP, <span class="va">self</span>).<span class="fu">__init__</span>()</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># First fully connected layer from input_size to hidden_size</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc1 <span class="op">=</span> nn.Linear(input_size, hidden_size)</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Second fully connected layer, hidden to hidden</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc2 <span class="op">=</span> nn.Linear(hidden_size, hidden_size)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Third fully connected layer from hidden_size to output_size</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc3 <span class="op">=</span> nn.Linear(hidden_size, output_size)</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Forward pass definition for the neural network</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x):</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Apply ReLU activation function after first layer</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> F.relu(<span class="va">self</span>.fc1(x))</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Apply ReLU activation function after second layer</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> F.relu(<span class="va">self</span>.fc2(x))</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Output layer, no activation function</span></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.fc3(x)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the neural network architecture for Deep Q-Learning</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> SimpleMLP(nn.Module):</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Constructor for the neural network</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, input_size, output_size, hidden_size<span class="op">=</span><span class="dv">64</span>):</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>(SimpleMLP, <span class="va">self</span>).<span class="fu">__init__</span>()</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># First fully connected layer from input_size to hidden_size</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc1 <span class="op">=</span> nn.Linear(input_size, hidden_size)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Second fully connected layer, hidden to hidden</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc2 <span class="op">=</span> nn.Linear(hidden_size, hidden_size)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Third fully connected layer from hidden_size to output_size</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc3 <span class="op">=</span> nn.Linear(hidden_size, output_size)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Forward pass definition for the neural network</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x):</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Apply ReLU activation function after first layer</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> F.relu(<span class="va">self</span>.fc1(x))</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Apply ReLU activation function after second layer</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> F.relu(<span class="va">self</span>.fc2(x))</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Output layer, no activation function</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.fc3(x)</span></code></pre></div>
 <p>The <code>SimpleMLP</code> class represents a multilayer perceptron
 with layers <code>fc1</code>, <code>fc2</code>, and
 <code>fc3</code>.</p>
@@ -897,84 +1037,84 @@ with layers <code>fc1</code>, <code>fc2</code>, and
 class="header-section-number">4.8.2</span> DQN Agent Class</h3>
 <p>Next, we have the <code>DQNAgent</code> class, controlling action
 selection and learning from interactions with the environment:</p>
-<div class="sourceCode" id="cb6"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> DQNAgent:</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Constructor for the DQN agent</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, input_size, output_size, hidden_size<span class="op">=</span><span class="dv">64</span>):</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="co"># The neural network model</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.model <span class="op">=</span> SimpleMLP(input_size, output_size, hidden_size)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Epsilon for the epsilon-greedy policy (initially set to 1 for full exploration)</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.epsilon <span class="op">=</span> <span class="fl">1.0</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Minimum value that epsilon can decay to over time</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.epsilon_min <span class="op">=</span> <span class="fl">0.01</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Rate at which epsilon is decayed over time</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.epsilon_decay <span class="op">=</span> <span class="fl">0.995</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>        <span class="co"># List to hold past experiences for replay</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.memory <span class="op">=</span> []</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Method to decide an action based on the current state</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> act(<span class="va">self</span>, state):</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check if we should take a random action (exploration)</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> np.random.rand() <span class="op">&lt;=</span> <span class="va">self</span>.epsilon:</span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Return a random action within the action space size</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> random.randrange(output_size)</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># If not exploring, process the state through the DQN to get the action values</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>        <span class="co"># First, ensure state is a PyTorch tensor</span></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> <span class="bu">isinstance</span>(state, torch.Tensor):</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>            state <span class="op">=</span> torch.from_numpy(state).<span class="bu">float</span>().unsqueeze(<span class="dv">0</span>)</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Forward pass through the network to get action values</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>        action_values <span class="op">=</span> <span class="va">self</span>.model(state)</span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Return the action with the highest value</span></span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.argmax(action_values.detach().numpy())</span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Method to store experiences in replay memory</span></span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> remember(<span class="va">self</span>, state, action, reward, next_state, done):</span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Append the experience as a tuple to the memory list</span></span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.memory.append((state, action, reward, next_state, done))</span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Method to decay epsilon over time for less exploration</span></span>
-<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update_epsilon(<span class="va">self</span>):</span>
-<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">self</span>.epsilon <span class="op">&gt;</span> <span class="va">self</span>.epsilon_min:</span>
-<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.epsilon <span class="op">*=</span> <span class="va">self</span>.epsilon_decay</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> DQNAgent:</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Constructor for the DQN agent</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, input_size, output_size, hidden_size<span class="op">=</span><span class="dv">64</span>):</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="co"># The neural network model</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.model <span class="op">=</span> SimpleMLP(input_size, output_size, hidden_size)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Epsilon for the epsilon-greedy policy (initially set to 1 for full exploration)</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.epsilon <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Minimum value that epsilon can decay to over time</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.epsilon_min <span class="op">=</span> <span class="fl">0.01</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Rate at which epsilon is decayed over time</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.epsilon_decay <span class="op">=</span> <span class="fl">0.995</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        <span class="co"># List to hold past experiences for replay</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.memory <span class="op">=</span> []</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Method to decide an action based on the current state</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> act(<span class="va">self</span>, state):</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check if we should take a random action (exploration)</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> np.random.rand() <span class="op">&lt;=</span> <span class="va">self</span>.epsilon:</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Return a random action within the action space size</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> random.randrange(output_size)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># If not exploring, process the state through the DQN to get the action values</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>        <span class="co"># First, ensure state is a PyTorch tensor</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> <span class="bu">isinstance</span>(state, torch.Tensor):</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>            state <span class="op">=</span> torch.from_numpy(state).<span class="bu">float</span>().unsqueeze(<span class="dv">0</span>)</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Forward pass through the network to get action values</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>        action_values <span class="op">=</span> <span class="va">self</span>.model(state)</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Return the action with the highest value</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.argmax(action_values.detach().numpy())</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Method to store experiences in replay memory</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> remember(<span class="va">self</span>, state, action, reward, next_state, done):</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Append the experience as a tuple to the memory list</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.memory.append((state, action, reward, next_state, done))</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Method to decay epsilon over time for less exploration</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update_epsilon(<span class="va">self</span>):</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">self</span>.epsilon <span class="op">&gt;</span> <span class="va">self</span>.epsilon_min:</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.epsilon <span class="op">*=</span> <span class="va">self</span>.epsilon_decay</span></code></pre></div>
 <p>Here, the agent is defined with methods like <code>act</code> for
 decision-making and constructors for agent properties.</p>
 <h3 data-number="4.8.3" id="training-the-model"><span
 class="header-section-number">4.8.3</span> Training the Model</h3>
 <p>The <code>train_model</code> function updates the network’s
 parameters using experience replay:</p>
-<div class="sourceCode" id="cb7"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Train the model based on a batch of experience</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> train_model(agent, optimizer, batch_size, gamma):</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check that there are enough experiences in memory to sample a batch</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(agent.memory) <span class="op">&lt;</span> batch_size:</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Sample a minibatch of experiences from memory</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    minibatch <span class="op">=</span> random.sample(agent.memory, batch_size)</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Unpack the experiences</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    states, actions, rewards, next_states, dones <span class="op">=</span> <span class="bu">zip</span>(<span class="op">*</span>minibatch)</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Convert experience components to PyTorch tensors</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    states <span class="op">=</span> torch.from_numpy(np.vstack(states)).<span class="bu">float</span>()</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    actions <span class="op">=</span> torch.from_numpy(np.vstack(actions)).<span class="bu">long</span>()</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    rewards <span class="op">=</span> torch.from_numpy(np.vstack(rewards)).<span class="bu">float</span>()</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    next_states <span class="op">=</span> torch.from_numpy(np.vstack(next_states)).<span class="bu">float</span>()</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    dones <span class="op">=</span> torch.from_numpy(np.vstack(dones).astype(np.uint8)).<span class="bu">float</span>()</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the expected Q values from the neural network</span></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    Q_expected <span class="op">=</span> agent.model(states).gather(<span class="dv">1</span>, actions)</span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the Q value for the next states and get the max Q value for each next state</span></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    Q_targets_next <span class="op">=</span> agent.model(next_states).detach().<span class="bu">max</span>(<span class="dv">1</span>)[<span class="dv">0</span>].unsqueeze(<span class="dv">1</span>)</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the target Q values for the current states using the Bellman equation</span></span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    Q_targets <span class="op">=</span> rewards <span class="op">+</span> (gamma <span class="op">*</span> Q_targets_next <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> dones))</span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the loss between the expected Q values and the target Q values</span></span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> F.mse_loss(Q_expected, Q_targets)</span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Backpropagate the loss, update the network weights</span></span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>    optimizer.zero_grad()</span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>    loss.backward()</span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>    optimizer.step()</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Train the model based on a batch of experience</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> train_model(agent, optimizer, batch_size, gamma):</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check that there are enough experiences in memory to sample a batch</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(agent.memory) <span class="op">&lt;</span> batch_size:</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Sample a minibatch of experiences from memory</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    minibatch <span class="op">=</span> random.sample(agent.memory, batch_size)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Unpack the experiences</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    states, actions, rewards, next_states, dones <span class="op">=</span> <span class="bu">zip</span>(<span class="op">*</span>minibatch)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Convert experience components to PyTorch tensors</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    states <span class="op">=</span> torch.from_numpy(np.vstack(states)).<span class="bu">float</span>()</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    actions <span class="op">=</span> torch.from_numpy(np.vstack(actions)).<span class="bu">long</span>()</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    rewards <span class="op">=</span> torch.from_numpy(np.vstack(rewards)).<span class="bu">float</span>()</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    next_states <span class="op">=</span> torch.from_numpy(np.vstack(next_states)).<span class="bu">float</span>()</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    dones <span class="op">=</span> torch.from_numpy(np.vstack(dones).astype(np.uint8)).<span class="bu">float</span>()</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the expected Q values from the neural network</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    Q_expected <span class="op">=</span> agent.model(states).gather(<span class="dv">1</span>, actions)</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the Q value for the next states and get the max Q value for each next state</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    Q_targets_next <span class="op">=</span> agent.model(next_states).detach().<span class="bu">max</span>(<span class="dv">1</span>)[<span class="dv">0</span>].unsqueeze(<span class="dv">1</span>)</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the target Q values for the current states using the Bellman equation</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    Q_targets <span class="op">=</span> rewards <span class="op">+</span> (gamma <span class="op">*</span> Q_targets_next <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> dones))</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the loss between the expected Q values and the target Q values</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> F.mse_loss(Q_expected, Q_targets)</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Backpropagate the loss, update the network weights</span></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    optimizer.zero_grad()</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>    loss.backward()</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    optimizer.step()</span></code></pre></div>
 <p>This function calculates the loss between the predicted and target
 Q-values and performs backpropagation to update the network weights.</p>
 <h3 data-number="4.8.4" id="logging-agents-performance"><span
@@ -982,79 +1122,79 @@ class="header-section-number">4.8.4</span> Logging Agent’s
 Performance</h3>
 <p>Finally, a simple logging function keeps track of the agent’s
 learning progress:</p>
-<div class="sourceCode" id="cb8"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Log the performance metrics</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> log_performance(episode, total_reward, steps, epsilon):</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print out the episode number, total reward, number of steps and the epsilon value</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Episode: </span><span class="sc">{</span>episode<span class="sc">}</span><span class="ss">, Total Reward: </span><span class="sc">{</span>total_reward<span class="sc">}</span><span class="ss">, Steps: </span><span class="sc">{</span>steps<span class="sc">}</span><span class="ss">, Epsilon: </span><span class="sc">{</span>epsilon<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Log the performance metrics</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> log_performance(episode, total_reward, steps, epsilon):</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print out the episode number, total reward, number of steps and the epsilon value</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Episode: </span><span class="sc">{</span>episode<span class="sc">}</span><span class="ss">, Total Reward: </span><span class="sc">{</span>total_reward<span class="sc">}</span><span class="ss">, Steps: </span><span class="sc">{</span>steps<span class="sc">}</span><span class="ss">, Epsilon: </span><span class="sc">{</span>epsilon<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
 <p>This utility function prints information about the episode number,
 total rewards, steps, and the epsilon value.</p>
 <h3 data-number="4.8.5" id="example-code-execution"><span
 class="header-section-number">4.8.5</span> Example Code Execution</h3>
 <p>The main function demonstrates initializing the environment, agent,
 training, and logging:</p>
-<div class="sourceCode" id="cb9"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialize the Gridworld environment</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    gridworld <span class="op">=</span> Gridworld(width<span class="op">=</span><span class="dv">5</span>, height<span class="op">=</span><span class="dv">5</span>, start<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>), goal<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">4</span>), obstacles<span class="op">=</span>[(<span class="dv">1</span>, <span class="dv">1</span>), (<span class="dv">2</span>, <span class="dv">2</span>), (<span class="dv">3</span>, <span class="dv">3</span>)])</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define action mapping that maps action indices to movements</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    action_mapping <span class="op">=</span> [(<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>), (<span class="dv">1</span>, <span class="dv">0</span>), (<span class="dv">0</span>, <span class="dv">1</span>), (<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>)]  <span class="co"># Up, Right, Down, Left</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the input size based on the environment&#39;s state space</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    input_size <span class="op">=</span> gridworld.width <span class="op">*</span> gridworld.height</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The output size is the number of possible actions</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    output_size <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialize the DQN agent</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    agent <span class="op">=</span> DQNAgent(input_size, output_size)</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define an optimizer for the neural network (Adam optimizer with a learning rate of 0.001)</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    optimizer <span class="op">=</span> torch.optim.Adam(agent.model.parameters(), lr<span class="op">=</span><span class="fl">0.001</span>)</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Batch size for experience replay</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    batch_size <span class="op">=</span> <span class="dv">32</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Discount factor for future rewards</span></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    gamma <span class="op">=</span> <span class="fl">0.99</span></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Function to convert a state to a tensor for neural network input</span></span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> state_to_tensor(state, grid_size<span class="op">=</span><span class="dv">5</span>):</span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Create a one-hot encoded vector for the state</span></span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>        state_vector <span class="op">=</span> torch.zeros(grid_size <span class="op">*</span> grid_size, dtype<span class="op">=</span>torch.float32)</span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>        state_vector[state] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> state_vector</span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Main training loop</span></span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> episode <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>):</span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Reset the environment at the start of each episode</span></span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>        state <span class="op">=</span> gridworld.reset()</span>
-<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Initialize total reward and steps counter</span></span>
-<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>        total_reward <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>        done <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>        steps <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Loop for each step in the episode</span></span>
-<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> <span class="kw">not</span> done:</span>
-<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Convert state to tensor format</span></span>
-<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>            state_vector <span class="op">=</span> state_to_tensor(state)</span>
-<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Select an action using the DQN agent&#39;s policy</span></span>
-<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>            action <span class="op">=</span> agent.act(state_vector)</span>
-<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Take the action in the environment and observe the next state and reward</span></span>
-<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>            next_state, reward, done <span class="op">=</span> gridworld.step(action_mapping[action])</span>
-<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Convert the next state to tensor format</span></span>
-<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>            next_state_vector <span class="op">=</span> state_to_tensor(next_state)</span>
-<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Remember the experience</span></span>
-<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>            agent.remember(state_vector, action, reward, next_state_vector, done)</span>
-<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Move to the next state</span></span>
-<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>            state <span class="op">=</span> next_state</span>
-<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Update the total reward</span></span>
-<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>            total_reward <span class="op">+=</span> reward</span>
-<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Increment the step counter</span></span>
-<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a>            steps <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Train the model with experiences from memory</span></span>
-<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a>            train_model(agent, optimizer, batch_size, gamma)</span>
-<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a>        <span class="co"># After the episode, decay epsilon for less exploration in future episodes</span></span>
-<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a>        agent.update_epsilon()</span>
-<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Log the performance metrics for the episode</span></span>
-<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a>        log_performance(episode, total_reward, steps, agent.epsilon)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialize the Gridworld environment</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    gridworld <span class="op">=</span> Gridworld(width<span class="op">=</span><span class="dv">5</span>, height<span class="op">=</span><span class="dv">5</span>, start<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>), goal<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">4</span>), obstacles<span class="op">=</span>[(<span class="dv">1</span>, <span class="dv">1</span>), (<span class="dv">2</span>, <span class="dv">2</span>), (<span class="dv">3</span>, <span class="dv">3</span>)])</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define action mapping that maps action indices to movements</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    action_mapping <span class="op">=</span> [(<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>), (<span class="dv">1</span>, <span class="dv">0</span>), (<span class="dv">0</span>, <span class="dv">1</span>), (<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>)]  <span class="co"># Up, Right, Down, Left</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the input size based on the environment&#39;s state space</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    input_size <span class="op">=</span> gridworld.width <span class="op">*</span> gridworld.height</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The output size is the number of possible actions</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    output_size <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialize the DQN agent</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    agent <span class="op">=</span> DQNAgent(input_size, output_size)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define an optimizer for the neural network (Adam optimizer with a learning rate of 0.001)</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    optimizer <span class="op">=</span> torch.optim.Adam(agent.model.parameters(), lr<span class="op">=</span><span class="fl">0.001</span>)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Batch size for experience replay</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    batch_size <span class="op">=</span> <span class="dv">32</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Discount factor for future rewards</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    gamma <span class="op">=</span> <span class="fl">0.99</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Function to convert a state to a tensor for neural network input</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> state_to_tensor(state, grid_size<span class="op">=</span><span class="dv">5</span>):</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Create a one-hot encoded vector for the state</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>        state_vector <span class="op">=</span> torch.zeros(grid_size <span class="op">*</span> grid_size, dtype<span class="op">=</span>torch.float32)</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>        state_vector[state] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> state_vector</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Main training loop</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> episode <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>):</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Reset the environment at the start of each episode</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>        state <span class="op">=</span> gridworld.reset()</span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Initialize total reward and steps counter</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>        total_reward <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>        done <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>        steps <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Loop for each step in the episode</span></span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> <span class="kw">not</span> done:</span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Convert state to tensor format</span></span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>            state_vector <span class="op">=</span> state_to_tensor(state)</span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Select an action using the DQN agent&#39;s policy</span></span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>            action <span class="op">=</span> agent.act(state_vector)</span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Take the action in the environment and observe the next state and reward</span></span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>            next_state, reward, done <span class="op">=</span> gridworld.step(action_mapping[action])</span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Convert the next state to tensor format</span></span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>            next_state_vector <span class="op">=</span> state_to_tensor(next_state)</span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Remember the experience</span></span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>            agent.remember(state_vector, action, reward, next_state_vector, done)</span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Move to the next state</span></span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a>            state <span class="op">=</span> next_state</span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Update the total reward</span></span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a>            total_reward <span class="op">+=</span> reward</span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Increment the step counter</span></span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>            steps <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Train the model with experiences from memory</span></span>
+<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a>            train_model(agent, optimizer, batch_size, gamma)</span>
+<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a>        <span class="co"># After the episode, decay epsilon for less exploration in future episodes</span></span>
+<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a>        agent.update_epsilon()</span>
+<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Log the performance metrics for the episode</span></span>
+<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a>        log_performance(episode, total_reward, steps, agent.epsilon)</span></code></pre></div>
 <p>Within each episode, the agent selects actions, updates its Q-values,
 and logs its performance.</p>
 <hr />
