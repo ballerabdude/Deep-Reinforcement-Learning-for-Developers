@@ -2,7 +2,8 @@
 
 ## Overview
 
-This chapter delves into the synergy between deep learning and reinforcement learning, leading to the burgeoning field of deep reinforcement learning (DRL). We aim to elucidate the essential principles of deep learning and show how neural networks, when paired with RL, can effectively address intricate decision-making challenges.
+This chapter explores the intersection of deep learning and reinforcement learning, forming the emerging field of deep reinforcement learning (DRL). Our goal is to clearly explain the fundamental concepts of deep learning and demonstrate how combining it with RL enables effective solutions for complex decision-making problems.
+
 
 ## Objectives
 
@@ -53,6 +54,17 @@ We recap the deep learning concepts introduced in this chapter and discuss their
 
 ## Implementing a Deep Q-Network (DQN) with PyTorch
 We use PyTorch to construct our DQN. The following parts detail each section of the code.
+
+Create a new file called `deep_q_learning_agent.py` and import the necessary libraries:
+
+```python
+import numpy as np
+import random
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from gridworld import Gridworld  # This imports the Gridworld environment
+```
 
 ### Defining the Network Architecture
 We start by defining our neural network:

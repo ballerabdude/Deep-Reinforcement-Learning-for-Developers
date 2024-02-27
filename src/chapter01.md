@@ -241,9 +241,7 @@ The agent in the Gridworld can perform four basic actions: moving up, down, left
 ### Summary and Next Steps
 We introduced a simple agent to our Gridworld project. This sets the foundation for more advanced learning algorithms to come.
 
----
-
-# The Complete Code:
+## Part 3: The Complete Code:
 
 We combine the elements from Part 1 and Part 2 to run our Gridworld simulation with the RandomAgent. The code for the agent's interaction with the Gridworld is in the gridworld_random_agent.py file.
 

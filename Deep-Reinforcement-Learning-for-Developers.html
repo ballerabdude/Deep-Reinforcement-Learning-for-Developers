@@ -112,43 +112,45 @@ Fundamentals</a></li>
 id="toc-part-2-building-the-agent"><span
 class="toc-section-number">1.2</span> Part 2: Building the
 Agent</a></li>
+<li><a href="#part-3-the-complete-code"
+id="toc-part-3-the-complete-code"><span
+class="toc-section-number">1.3</span> Part 3: The Complete
+Code:</a></li>
 </ul></li>
-<li><a href="#the-complete-code" id="toc-the-complete-code"><span
-class="toc-section-number">2</span> The Complete Code:</a></li>
 <li><a href="#chapter-2-basics-of-q-learning"
 id="toc-chapter-2-basics-of-q-learning"><span
-class="toc-section-number">3</span> Chapter 2: Basics of
+class="toc-section-number">2</span> Chapter 2: Basics of
 Q-Learning</a></li>
 <li><a
 href="#chapter-3-fundamentals-of-deep-learning-for-reinforcement-learning"
 id="toc-chapter-3-fundamentals-of-deep-learning-for-reinforcement-learning"><span
-class="toc-section-number">4</span> Chapter 3: Fundamentals of Deep
+class="toc-section-number">3</span> Chapter 3: Fundamentals of Deep
 Learning for Reinforcement Learning</a>
 <ul>
 <li><a href="#overview-1" id="toc-overview-1"><span
-class="toc-section-number">4.1</span> Overview</a></li>
+class="toc-section-number">3.1</span> Overview</a></li>
 <li><a href="#objectives-1" id="toc-objectives-1"><span
-class="toc-section-number">4.2</span> Objectives</a></li>
+class="toc-section-number">3.2</span> Objectives</a></li>
 <li><a href="#introduction-to-neural-networks"
 id="toc-introduction-to-neural-networks"><span
-class="toc-section-number">4.3</span> Introduction to Neural
+class="toc-section-number">3.3</span> Introduction to Neural
 Networks</a></li>
 <li><a href="#how-neural-networks-learn"
 id="toc-how-neural-networks-learn"><span
-class="toc-section-number">4.4</span> How Neural Networks Learn</a></li>
+class="toc-section-number">3.4</span> How Neural Networks Learn</a></li>
 <li><a href="#deep-learning-in-reinforcement-learning"
 id="toc-deep-learning-in-reinforcement-learning"><span
-class="toc-section-number">4.5</span> Deep Learning in Reinforcement
+class="toc-section-number">3.5</span> Deep Learning in Reinforcement
 Learning</a></li>
 <li><a href="#enhancing-gridworld-with-deep-learning"
 id="toc-enhancing-gridworld-with-deep-learning"><span
-class="toc-section-number">4.6</span> Enhancing Gridworld with Deep
+class="toc-section-number">3.6</span> Enhancing Gridworld with Deep
 Learning</a></li>
 <li><a href="#summary-2" id="toc-summary-2"><span
-class="toc-section-number">4.7</span> Summary</a></li>
+class="toc-section-number">3.7</span> Summary</a></li>
 <li><a href="#implementing-a-deep-q-network-dqn-with-pytorch"
 id="toc-implementing-a-deep-q-network-dqn-with-pytorch"><span
-class="toc-section-number">4.8</span> Implementing a Deep Q-Network
+class="toc-section-number">3.8</span> Implementing a Deep Q-Network
 (DQN) with PyTorch</a></li>
 </ul></li>
 </ul>
@@ -522,9 +524,8 @@ x-coordinate increases by 1 with no change in the y-coordinate.</p></li>
 class="header-section-number">1.2.2</span> Summary and Next Steps</h3>
 <p>We introduced a simple agent to our Gridworld project. This sets the
 foundation for more advanced learning algorithms to come.</p>
-<hr />
-<h1 data-number="2" id="the-complete-code"><span
-class="header-section-number">2</span> The Complete Code:</h1>
+<h2 data-number="1.3" id="part-3-the-complete-code"><span
+class="header-section-number">1.3</span> Part 3: The Complete Code:</h2>
 <p>We combine the elements from Part 1 and Part 2 to run our Gridworld
 simulation with the RandomAgent. The code for the agent’s interaction
 with the Gridworld is in the gridworld_random_agent.py file.</p>
@@ -557,28 +558,28 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a hr
 <span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> _ <span class="op">==</span> episodes <span class="op">-</span> <span class="dv">1</span> <span class="kw">and</span> <span class="kw">not</span> done:</span>
 <span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;Goal not reached!&quot;</span>)</span>
 <span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Total reward: </span><span class="sc">{</span>total_reward<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
-<h3 data-number="2.0.1" id="why-these-actions"><span
-class="header-section-number">2.0.1</span> Why These Actions?</h3>
+<h3 data-number="1.3.1" id="why-these-actions"><span
+class="header-section-number">1.3.1</span> Why These Actions?</h3>
 <p>We selected standard grid movement actions for simplicity and to
 establish a baseline for agent behavior.</p>
-<h3 data-number="2.0.2" id="following-equations-and-logic"><span
-class="header-section-number">2.0.2</span> Following Equations and
+<h3 data-number="1.3.2" id="following-equations-and-logic"><span
+class="header-section-number">1.3.2</span> Following Equations and
 Logic</h3>
 <p>At this stage, the agent’s decisions are random. We’ll later
 introduce more sophisticated strategies based on RL algorithms and
 mathematical foundations.</p>
-<h3 data-number="2.0.3" id="summary-1"><span
-class="header-section-number">2.0.3</span> Summary</h3>
+<h3 data-number="1.3.3" id="summary-1"><span
+class="header-section-number">1.3.3</span> Summary</h3>
 <p>Chapter 1 sets the stage for an exploration into reinforcement
 learning, providing the fundamental concepts and a practical project to
 apply these ideas. As we progress, the agents will evolve from making
 random moves to employing advanced strategies informed by their
 interactions with the environment.</p>
-<h1 data-number="3" id="chapter-2-basics-of-q-learning"><span
-class="header-section-number">3</span> Chapter 2: Basics of
+<h1 data-number="2" id="chapter-2-basics-of-q-learning"><span
+class="header-section-number">2</span> Chapter 2: Basics of
 Q-Learning</h1>
-<h3 data-number="3.0.1" id="introduction-to-q-learning"><span
-class="header-section-number">3.0.1</span> Introduction to
+<h3 data-number="2.0.1" id="introduction-to-q-learning"><span
+class="header-section-number">2.0.1</span> Introduction to
 Q-Learning</h3>
 <p>Q-Learning is a foundational model-free reinforcement learning
 algorithm that enables agents to learn optimal policies for
@@ -586,34 +587,112 @@ decision-making without knowing the dynamics of the environment they
 operate in. By interacting with the environment, the agent learns to
 associate actions with rewards and discovers the best strategy through
 trial and error.</p>
-<h3 data-number="3.0.2" id="understanding-q-values"><span
-class="header-section-number">3.0.2</span> Understanding Q-values</h3>
+<p>The term “Model-free” in the context of Q-Learning refers to a
+specific approach within reinforcement learning, characterized by:</p>
+<ol type="1">
+<li><p>No Environment Dynamics Knowledge: In model-free Q-Learning, the
+algorithm does not require prior knowledge of the environment’s
+dynamics. This means it does not need to know how the environment will
+respond to its actions, including state transitions and expected
+outcomes.</p></li>
+<li><p>Learning Through Experience: The agent learns by interacting with
+the environment, taking actions, observing outcomes, and updating its
+knowledge based on the results. This is often done through a Q-table,
+mapping state-action pairs to expected rewards.</p></li>
+<li><p>Flexibility and Generality: Model-free methods are applicable to
+a wide range of environments, especially useful when the environment is
+complex, unpredictable, or not fully understood.</p></li>
+<li><p>Exploration vs. Exploitation: A key challenge in model-free
+learning is balancing exploration (trying new actions for more
+information) and exploitation (using known information to maximize
+rewards), enabling the algorithm to learn effectively while performing
+optimally.</p></li>
+</ol>
+<p>This approach allows agents to operate effectively in environments
+where the dynamics are unknown or too complex to model.</p>
+<h3 data-number="2.0.2" id="understanding-q-values"><span
+class="header-section-number">2.0.2</span> Understanding Q-values</h3>
 <p>At the core of Q-Learning are the Q-values, which represent the
 expected cumulative reward of taking an action in a given state and
 following the optimal policy thereafter. The Q-value function is denoted
 by Q(s, a), where ‘s’ stands for state and ‘a’ for action.</p>
-<h3 data-number="3.0.3"
+<h3 data-number="2.0.3"
 id="the-q-learning-algorithm-process-and-components"><span
-class="header-section-number">3.0.3</span> The Q-Learning Algorithm:
+class="header-section-number">2.0.3</span> The Q-Learning Algorithm:
 Process and Components</h3>
 <p>The Q-Learning algorithm can be summarized in several key steps:</p>
 <ol type="1">
 <li><p>Initialize the Q-values table (Q-table) arbitrarily for all
-state-action pairs.</p></li>
+state-action pairs. The Q-table is generally initialized with
+zeros.</p></li>
 <li><p>Observe the current state <code>s</code>.</p></li>
 <li><p>Choose an action <code>a</code> for the state <code>s</code>
-based on a policy derived from the Q-values (e.g., ε-greedy).</p></li>
+based on a policy derived from the Q-values (e.g., ε-greedy).</p>
+<ul>
+<li>A “policy” in this context is a strategy or rule that the agent
+follows to decide which action to take in a given state. It guides the
+action selection process based on the current Q-values, balancing
+exploration (trying new actions) and exploitation (using known valuable
+actions).</li>
+</ul></li>
 <li><p>Take the action <code>a</code>, and observe the outcome state
-<code>s'</code> and reward <code>r</code>.</p></li>
+<code>s'</code>(Pronounced “S Prime”) and reward <code>r</code>.</p>
+<ul>
+<li>The outcome state <code>s'</code> refers to the new state the agent
+finds itself in after taking action <code>a</code>. It represents the
+next state in the environment as a result of the agent’s action.</li>
+<li>The reward <code>r</code> is a feedback signal received from the
+environment. It indicates how good or bad the action taken was, based on
+the environment’s rules. Rewards guide the agent to learn which actions
+are beneficial in achieving its goals.</li>
+</ul></li>
 <li><p>Update the Q-value for the state-action pair based on the
 formula:</p>
-<p>Q(s, a) = Q(s, a) + α * <a
-href="This%20is%20the%20difference%20between%20the%20learned%20value%20and%20the%20old%20value;%20it%20is%20sometimes%20termed%20as%20the%20Temporal%20Difference%20error%20or%20simply%20TD%20error.">r
-+ γ * maxQ(s’, a’) - Q(s, a)</a></p>
-<p>where:</p>
+<p>Q(s, a) = Q(s, a) + α * [r + γ * maxQ(s’, a’) - Q(s, a)]</p>
+<p>The formula is a key part of reinforcement learning, specifically in
+Q-learning. It’s used for updating the value of the Q-function, which
+estimates the rewards for a given state-action pair. Below is the
+breakdown of each component:</p>
+<ol type="1">
+<li><strong>Q(s, a)</strong>:</li>
+</ol>
 <ul>
-<li>α (alpha) is the learning rate (0 &lt; α ≤ 1)</li>
-<li>γ (gamma) is the discount factor (0 ≤ γ &lt; 1)</li>
+<li>Represents the current estimate of the rewards that can be gained by
+taking action ‘a’ in state ‘s’.</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>α (Alpha)</strong>:</li>
+</ol>
+<ul>
+<li>The learning rate.</li>
+<li>Determines to what extent the newly acquired information overrides
+the old information.</li>
+</ul>
+<ol start="3" type="1">
+<li><strong>r</strong>:</li>
+</ol>
+<ul>
+<li>The reward received after taking action ‘a’ in state ‘s’.</li>
+</ul>
+<ol start="4" type="1">
+<li><strong>γ (Gamma)</strong>:</li>
+</ol>
+<ul>
+<li>The discount factor.</li>
+<li>Determines the importance of future rewards.</li>
+</ul>
+<ol start="5" type="1">
+<li><strong>max Q(s’, a’)</strong>:</li>
+</ol>
+<ul>
+<li>Represents the maximum predicted reward that can be achieved in the
+new state ‘s’ after taking action ‘a’.</li>
+</ul>
+<ol start="6" type="1">
+<li><strong>Q(s, a) [Second Occurrence]</strong>:</li>
+</ol>
+<ul>
+<li>The old value of the Q-function, which is being updated.</li>
 </ul></li>
 <li><p>Set the state <code>s</code> to the new state
 <code>s'</code>.</p></li>
@@ -634,39 +713,20 @@ future rewards over immediate ones.</li>
 <li><strong>Reward (r)</strong>: The signal received from the
 environment to evaluate the last action.</li>
 </ul>
-<p>The formula Q(s, a) = Q(s, a) + α * <a
-href="This%20is%20the%20difference%20between%20the%20learned%20value%20and%20the%20old%20value;%20it%20is%20sometimes%20termed%20as%20the%20Temporal%20Difference%20error%20or%20simply%20TD%20error.">r
-+ γ * maxQ(s’, a’) - Q(s, a)</a> is used to update the Q-value of the
-state-action pair. Let’s break this down:</p>
-<ul>
-<li>Q(s, a): This is the old or previous Q-value of the pair (state,
-action).</li>
-<li>r: This is the immediate reward got after performing the action ‘a’
-in state ‘s’.</li>
-<li>maxQ(s’, a’): This is the maximum Q-value possible for the next
-state ‘s’ across all possible actions. It is picked based on the current
-knowledge the agent has (i.e., based on the current Q-table).</li>
-<li>γ * maxQ(s’, a’): This term is the discounted maximum future reward
-from the next state ‘s’. The discount factor ‘γ’ ensures the agent cares
-more about immediate reward over distant or future reward; if ‘γ’ is
-close to 1 the agent will consider future rewards significantly but if
-‘γ’ is close to 0 the agent cares mostly about immediate rewards.</li>
-<li></li>
-<li>α * <a
-href="This%20is%20the%20difference%20between%20the%20learned%20value%20and%20the%20old%20value;%20it%20is%20sometimes%20termed%20as%20the%20Temporal%20Difference%20error%20or%20simply%20TD%20error.">r
-+ γ * maxQ(s’, a’) - Q(s, a)</a>: The learning rate ‘α’ is applied to
-the TD error to moderate the update. If ‘α’ is closer to 1, learning is
-faster as it depends more on the newest experience; if ‘α’ is closer to
-0, learning is slower as it leverages more on cumulative past
-experiences.</li>
-</ul>
-<p>So, this entire formula represents the idea that the Q-value for a
-given state-action pair is updated by the learning rate ‘α’ times the
-difference between the learned value (reward plus discounted future
-value) and the old value. This guides the agent to better actions as it
-navigates and learns from its environment.</p>
-<h3 data-number="3.0.4" id="convergence-of-q-learning"><span
-class="header-section-number">3.0.4</span> Convergence of
+<p>The formula in english: “The value of Q at state ‘s’ and action ‘a’
+is updated to be equal to its old value plus the product of the learning
+rate, alpha, and the difference between the immediate reward ‘r’ and the
+discounted maximum future reward from the new state ‘s’ prime and any
+action ‘a’ prime, minus the old Q value at state ‘s’ and action ‘a’. In
+simpler terms, this formula adjusts the Q value for a given state-action
+pair based on the immediate reward received, the best possible future
+rewards, and how much we value future rewards compared to immediate
+ones.”</p>
+<p>This description conveys the intent of the formula, which is to
+update the Q value based on new information about rewards and future
+possibilities.</p>
+<h3 data-number="2.0.4" id="convergence-of-q-learning"><span
+class="header-section-number">2.0.4</span> Convergence of
 Q-Learning</h3>
 <p>In the context of Q-Learning, convergence refers to the point at
 which the Q-values stop updating significantly and remain stable. This
@@ -683,41 +743,40 @@ like infinite visits to each state-action pair (ensuring sufficient
 exploration), appropriate setting of parameters such as the learning
 rate and discount factor, among other considerations.</p>
 <hr />
-<h3 data-number="3.0.5" id="project-q-learning-in-a-grid-world"><span
-class="header-section-number">3.0.5</span> Project: Q-Learning in a Grid
+<h3 data-number="2.0.5" id="project-q-learning-in-a-grid-world"><span
+class="header-section-number">2.0.5</span> Project: Q-Learning in a Grid
 World</h3>
 <p>We’ll build a Q-Learning agent to navigate a Grid World environment.
 This project will solidify the concepts presented in this chapter and
 provide practical experience with the algorithm.</p>
-<h4 data-number="3.0.5.1"
+<h4 data-number="2.0.5.1"
 id="setting-up-a-simple-grid-world-environment"><span
-class="header-section-number">3.0.5.1</span> Setting Up a Simple Grid
+class="header-section-number">2.0.5.1</span> Setting Up a Simple Grid
 World Environment</h4>
 <p>We’ll use the Gridworld environment from Chapter 1, which provides
 the necessary methods to simulate an agent’s interaction with the
 environment.</p>
-<h4 data-number="3.0.5.2" id="implementing-q-learning-algorithm"><span
-class="header-section-number">3.0.5.2</span> Implementing Q-Learning
+<h4 data-number="2.0.5.2" id="implementing-q-learning-algorithm"><span
+class="header-section-number">2.0.5.2</span> Implementing Q-Learning
 Algorithm</h4>
 <p>We will implement the Q-Learning algorithm in a Python script called
-<code>q_learning_agent.py</code>. The script will interface with the
-Gridworld class to train the agent.</p>
-<h4 data-number="3.0.5.3"
+q_learning_agent.py. The script will interface with the Gridworld class
+to train the agent.</p>
+<h4 data-number="2.0.5.3"
 id="defining-states-and-actions-in-the-grid-world"><span
-class="header-section-number">3.0.5.3</span> Defining States and Actions
+class="header-section-number">2.0.5.3</span> Defining States and Actions
 in the Grid World</h4>
 <p>The Grid World environment will consist of discrete states and
 actions. The agent can move in four directions: up, down, left, and
 right.</p>
-<h4 data-number="3.0.5.4" id="experimenting-with-q-value-updates"><span
-class="header-section-number">3.0.5.4</span> Experimenting with Q-Value
+<h4 data-number="2.0.5.4" id="experimenting-with-q-value-updates"><span
+class="header-section-number">2.0.5.4</span> Experimenting with Q-Value
 Updates</h4>
 <p>The agent will update its Q-values based on the rewards it receives
 from the environment. The goal is for the agent to learn how to reach
 the goal efficiently.</p>
 <hr />
-<p>Now, let’s begin our project with the
-<code>q_learning_agent.py</code> script.</p>
+<p>Now, let’s begin our project with the q_learning_agent.py script.</p>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># q_learning_agent.py</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -829,8 +888,8 @@ runs the training process. The agent is tested in the
 after training.</p>
 <p>Continuing with the remaining sections of the chapter and further
 description of the code:</p>
-<h3 data-number="3.0.6" id="running-the-training-process"><span
-class="header-section-number">3.0.6</span> Running the Training
+<h3 data-number="2.0.6" id="running-the-training-process"><span
+class="header-section-number">2.0.6</span> Running the Training
 Process</h3>
 <p>With the <code>q_learning_agent.py</code> script defined, we can now
 discuss the execution of the training process. The main objective is to
@@ -849,8 +908,8 @@ After training for the specified number of episodes, the learned
 Q-values are saved to a file. This data can be used for analysis or to
 initialize the agent at a later time for further learning or policy
 execution.</p>
-<h3 data-number="3.0.7" id="analyzing-the-results"><span
-class="header-section-number">3.0.7</span> Analyzing the Results</h3>
+<h3 data-number="2.0.7" id="analyzing-the-results"><span
+class="header-section-number">2.0.7</span> Analyzing the Results</h3>
 <p>After training, it’s beneficial to analyze the results. You can do
 this by looking at the Q-values to understand what the agent has
 learned. Checking the convergence of Q-values can indicate whether the
@@ -862,8 +921,8 @@ observing its actions. This can be done by modifying the
 after each action or by creating a separate method for policy execution
 where the agent only selects the best-known action without further
 exploration.</p>
-<h3 data-number="3.0.8" id="considerations-for-improving-learning"><span
-class="header-section-number">3.0.8</span> Considerations for Improving
+<h3 data-number="2.0.8" id="considerations-for-improving-learning"><span
+class="header-section-number">2.0.8</span> Considerations for Improving
 Learning</h3>
 <p>Several factors can influence the effectiveness of Q-Learning: -
 <strong>Learning Rate (α):</strong> Determines how much new information
@@ -877,8 +936,8 @@ gradually reducing ε (known as epsilon decay) can lead to better
 exploitation of the learned values. - <strong>Initial Q-values:</strong>
 Setting initial Q-values to optimistic estimates can encourage
 exploration. This is known as optimistic initialization.</p>
-<h3 data-number="3.0.9" id="conclusion-and-next-steps"><span
-class="header-section-number">3.0.9</span> Conclusion and Next
+<h3 data-number="2.0.9" id="conclusion-and-next-steps"><span
+class="header-section-number">2.0.9</span> Conclusion and Next
 Steps</h3>
 <p>By implementing the Q-Learning algorithm in a practical example such
 as the <code>Gridworld</code>, we have gained a deeper understanding of
@@ -901,20 +960,19 @@ components, and practical application in a simple Grid World
 environment. The project has provided a hands-on experience with coding
 a Q-Learning agent and running it to learn a policy for navigating the
 Grid World.</p>
-<h1 data-number="4"
+<h1 data-number="3"
 id="chapter-3-fundamentals-of-deep-learning-for-reinforcement-learning"><span
-class="header-section-number">4</span> Chapter 3: Fundamentals of Deep
+class="header-section-number">3</span> Chapter 3: Fundamentals of Deep
 Learning for Reinforcement Learning</h1>
-<h2 data-number="4.1" id="overview-1"><span
-class="header-section-number">4.1</span> Overview</h2>
-<p>This chapter delves into the synergy between deep learning and
-reinforcement learning, leading to the burgeoning field of deep
-reinforcement learning (DRL). We aim to elucidate the essential
-principles of deep learning and show how neural networks, when paired
-with RL, can effectively address intricate decision-making
-challenges.</p>
-<h2 data-number="4.2" id="objectives-1"><span
-class="header-section-number">4.2</span> Objectives</h2>
+<h2 data-number="3.1" id="overview-1"><span
+class="header-section-number">3.1</span> Overview</h2>
+<p>This chapter explores the intersection of deep learning and
+reinforcement learning, forming the emerging field of deep reinforcement
+learning (DRL). Our goal is to clearly explain the fundamental concepts
+of deep learning and demonstrate how combining it with RL enables
+effective solutions for complex decision-making problems.</p>
+<h2 data-number="3.2" id="objectives-1"><span
+class="header-section-number">3.2</span> Objectives</h2>
 <ul>
 <li>Understand the fundamental concepts of deep learning, with a focus
 on neural networks.</li>
@@ -923,16 +981,16 @@ improve their performance.</li>
 <li>Prepare to implement a deep Q-network (DQN) in the Gridworld
 project.</li>
 </ul>
-<h2 data-number="4.3" id="introduction-to-neural-networks"><span
-class="header-section-number">4.3</span> Introduction to Neural
+<h2 data-number="3.3" id="introduction-to-neural-networks"><span
+class="header-section-number">3.3</span> Introduction to Neural
 Networks</h2>
 <p>Neural networks are designed to mimic the workings of the human brain
 and are made up of interconnected units called neurons. These networks
 have the capacity to learn from data, enabling them to perform tasks
 such as predictions or decision-making without the need for explicit
 programming.</p>
-<h3 data-number="4.3.1" id="key-concepts-in-neural-networks"><span
-class="header-section-number">4.3.1</span> Key Concepts in Neural
+<h3 data-number="3.3.1" id="key-concepts-in-neural-networks"><span
+class="header-section-number">3.3.1</span> Key Concepts in Neural
 Networks</h3>
 <ul>
 <li><strong>Neurons</strong>: The building blocks of neural networks
@@ -945,8 +1003,8 @@ and the output layer.</li>
 adjust during training to make the neural network’s predictions as
 accurate as possible.</li>
 </ul>
-<h2 data-number="4.4" id="how-neural-networks-learn"><span
-class="header-section-number">4.4</span> How Neural Networks Learn</h2>
+<h2 data-number="3.4" id="how-neural-networks-learn"><span
+class="header-section-number">3.4</span> How Neural Networks Learn</h2>
 <p>The process of learning in neural networks involves adjusting their
 weights and biases. The goal is to reduce the discrepancy between the
 model’s predictions and the actual target values.</p>
@@ -962,14 +1020,14 @@ training, backpropagation calculates the gradient of the loss function
 with respect to each weight and bias, using these gradients to update
 the parameters via gradient descent.</li>
 </ul>
-<h2 data-number="4.5" id="deep-learning-in-reinforcement-learning"><span
-class="header-section-number">4.5</span> Deep Learning in Reinforcement
+<h2 data-number="3.5" id="deep-learning-in-reinforcement-learning"><span
+class="header-section-number">3.5</span> Deep Learning in Reinforcement
 Learning</h2>
 <p>Deep learning equips RL with powerful function approximation
 capabilities, essential for dealing with high-dimensional state or
 action spaces.</p>
-<h3 data-number="4.5.1" id="deep-reinforcement-learning"><span
-class="header-section-number">4.5.1</span> Deep Reinforcement
+<h3 data-number="3.5.1" id="deep-reinforcement-learning"><span
+class="header-section-number">3.5.1</span> Deep Reinforcement
 Learning</h3>
 <ul>
 <li><strong>Function Approximation</strong>: The application of deep
@@ -978,8 +1036,8 @@ neural networks to estimate value functions or policy functions.</li>
 process complex inputs, generalize across different states, and discern
 underlying patterns in the data.</li>
 </ul>
-<h2 data-number="4.6" id="enhancing-gridworld-with-deep-learning"><span
-class="header-section-number">4.6</span> Enhancing Gridworld with Deep
+<h2 data-number="3.6" id="enhancing-gridworld-with-deep-learning"><span
+class="header-section-number">3.6</span> Enhancing Gridworld with Deep
 Learning</h2>
 <p>To integrate deep learning into our Gridworld example, we will employ
 a deep Q-network (DQN). A DQN utilizes a neural network to estimate the
@@ -993,208 +1051,217 @@ Gridworld.</li>
 modifications to the existing Gridworld project to incorporate a
 DQN.</li>
 </ul>
-<h2 data-number="4.7" id="summary-2"><span
-class="header-section-number">4.7</span> Summary</h2>
+<h2 data-number="3.7" id="summary-2"><span
+class="header-section-number">3.7</span> Summary</h2>
 <p>We recap the deep learning concepts introduced in this chapter and
 discuss their relevance to RL. This provides the foundation for a
 hands-on implementation of a DQN in the following sections.</p>
 <hr />
-<h2 data-number="4.8"
+<h2 data-number="3.8"
 id="implementing-a-deep-q-network-dqn-with-pytorch"><span
-class="header-section-number">4.8</span> Implementing a Deep Q-Network
+class="header-section-number">3.8</span> Implementing a Deep Q-Network
 (DQN) with PyTorch</h2>
 <p>We use PyTorch to construct our DQN. The following parts detail each
 section of the code.</p>
-<h3 data-number="4.8.1" id="defining-the-network-architecture"><span
-class="header-section-number">4.8.1</span> Defining the Network
+<p>Create a new file called <code>deep_q_learning_agent.py</code> and
+import the necessary libraries:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn <span class="im">as</span> nn</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn.functional <span class="im">as</span> F</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gridworld <span class="im">import</span> Gridworld  <span class="co"># This imports the Gridworld environment</span></span></code></pre></div>
+<h3 data-number="3.8.1" id="defining-the-network-architecture"><span
+class="header-section-number">3.8.1</span> Defining the Network
 Architecture</h3>
 <p>We start by defining our neural network:</p>
-<div class="sourceCode" id="cb6"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the neural network architecture for Deep Q-Learning</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> SimpleMLP(nn.Module):</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Constructor for the neural network</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, input_size, output_size, hidden_size<span class="op">=</span><span class="dv">64</span>):</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>(SimpleMLP, <span class="va">self</span>).<span class="fu">__init__</span>()</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># First fully connected layer from input_size to hidden_size</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc1 <span class="op">=</span> nn.Linear(input_size, hidden_size)</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Second fully connected layer, hidden to hidden</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc2 <span class="op">=</span> nn.Linear(hidden_size, hidden_size)</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Third fully connected layer from hidden_size to output_size</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc3 <span class="op">=</span> nn.Linear(hidden_size, output_size)</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Forward pass definition for the neural network</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x):</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Apply ReLU activation function after first layer</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> F.relu(<span class="va">self</span>.fc1(x))</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Apply ReLU activation function after second layer</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> F.relu(<span class="va">self</span>.fc2(x))</span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Output layer, no activation function</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.fc3(x)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the neural network architecture for Deep Q-Learning</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> SimpleMLP(nn.Module):</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Constructor for the neural network</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, input_size, output_size, hidden_size<span class="op">=</span><span class="dv">64</span>):</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>(SimpleMLP, <span class="va">self</span>).<span class="fu">__init__</span>()</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># First fully connected layer from input_size to hidden_size</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc1 <span class="op">=</span> nn.Linear(input_size, hidden_size)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Second fully connected layer, hidden to hidden</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc2 <span class="op">=</span> nn.Linear(hidden_size, hidden_size)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Third fully connected layer from hidden_size to output_size</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc3 <span class="op">=</span> nn.Linear(hidden_size, output_size)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Forward pass definition for the neural network</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x):</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Apply ReLU activation function after first layer</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> F.relu(<span class="va">self</span>.fc1(x))</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Apply ReLU activation function after second layer</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> F.relu(<span class="va">self</span>.fc2(x))</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Output layer, no activation function</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.fc3(x)</span></code></pre></div>
 <p>The <code>SimpleMLP</code> class represents a multilayer perceptron
 with layers <code>fc1</code>, <code>fc2</code>, and
 <code>fc3</code>.</p>
-<h3 data-number="4.8.2" id="dqn-agent-class"><span
-class="header-section-number">4.8.2</span> DQN Agent Class</h3>
+<h3 data-number="3.8.2" id="dqn-agent-class"><span
+class="header-section-number">3.8.2</span> DQN Agent Class</h3>
 <p>Next, we have the <code>DQNAgent</code> class, controlling action
 selection and learning from interactions with the environment:</p>
-<div class="sourceCode" id="cb7"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> DQNAgent:</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Constructor for the DQN agent</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, input_size, output_size, hidden_size<span class="op">=</span><span class="dv">64</span>):</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="co"># The neural network model</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.model <span class="op">=</span> SimpleMLP(input_size, output_size, hidden_size)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Epsilon for the epsilon-greedy policy (initially set to 1 for full exploration)</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.epsilon <span class="op">=</span> <span class="fl">1.0</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Minimum value that epsilon can decay to over time</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.epsilon_min <span class="op">=</span> <span class="fl">0.01</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Rate at which epsilon is decayed over time</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.epsilon_decay <span class="op">=</span> <span class="fl">0.995</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        <span class="co"># List to hold past experiences for replay</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.memory <span class="op">=</span> []</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Method to decide an action based on the current state</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> act(<span class="va">self</span>, state):</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check if we should take a random action (exploration)</span></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> np.random.rand() <span class="op">&lt;=</span> <span class="va">self</span>.epsilon:</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Return a random action within the action space size</span></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> random.randrange(output_size)</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># If not exploring, process the state through the DQN to get the action values</span></span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>        <span class="co"># First, ensure state is a PyTorch tensor</span></span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> <span class="bu">isinstance</span>(state, torch.Tensor):</span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>            state <span class="op">=</span> torch.from_numpy(state).<span class="bu">float</span>().unsqueeze(<span class="dv">0</span>)</span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Forward pass through the network to get action values</span></span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>        action_values <span class="op">=</span> <span class="va">self</span>.model(state)</span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Return the action with the highest value</span></span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.argmax(action_values.detach().numpy())</span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Method to store experiences in replay memory</span></span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> remember(<span class="va">self</span>, state, action, reward, next_state, done):</span>
-<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Append the experience as a tuple to the memory list</span></span>
-<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.memory.append((state, action, reward, next_state, done))</span>
-<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Method to decay epsilon over time for less exploration</span></span>
-<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update_epsilon(<span class="va">self</span>):</span>
-<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">self</span>.epsilon <span class="op">&gt;</span> <span class="va">self</span>.epsilon_min:</span>
-<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.epsilon <span class="op">*=</span> <span class="va">self</span>.epsilon_decay</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> DQNAgent:</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Constructor for the DQN agent</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, input_size, output_size, hidden_size<span class="op">=</span><span class="dv">64</span>):</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="co"># The neural network model</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.model <span class="op">=</span> SimpleMLP(input_size, output_size, hidden_size)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Epsilon for the epsilon-greedy policy (initially set to 1 for full exploration)</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.epsilon <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Minimum value that epsilon can decay to over time</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.epsilon_min <span class="op">=</span> <span class="fl">0.01</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Rate at which epsilon is decayed over time</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.epsilon_decay <span class="op">=</span> <span class="fl">0.995</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>        <span class="co"># List to hold past experiences for replay</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.memory <span class="op">=</span> []</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Method to decide an action based on the current state</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> act(<span class="va">self</span>, state):</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check if we should take a random action (exploration)</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> np.random.rand() <span class="op">&lt;=</span> <span class="va">self</span>.epsilon:</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Return a random action within the action space size</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> random.randrange(output_size)</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># If not exploring, process the state through the DQN to get the action values</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>        <span class="co"># First, ensure state is a PyTorch tensor</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> <span class="bu">isinstance</span>(state, torch.Tensor):</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>            state <span class="op">=</span> torch.from_numpy(state).<span class="bu">float</span>().unsqueeze(<span class="dv">0</span>)</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Forward pass through the network to get action values</span></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>        action_values <span class="op">=</span> <span class="va">self</span>.model(state)</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Return the action with the highest value</span></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.argmax(action_values.detach().numpy())</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Method to store experiences in replay memory</span></span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> remember(<span class="va">self</span>, state, action, reward, next_state, done):</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Append the experience as a tuple to the memory list</span></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.memory.append((state, action, reward, next_state, done))</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Method to decay epsilon over time for less exploration</span></span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update_epsilon(<span class="va">self</span>):</span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">self</span>.epsilon <span class="op">&gt;</span> <span class="va">self</span>.epsilon_min:</span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.epsilon <span class="op">*=</span> <span class="va">self</span>.epsilon_decay</span></code></pre></div>
 <p>Here, the agent is defined with methods like <code>act</code> for
 decision-making and constructors for agent properties.</p>
-<h3 data-number="4.8.3" id="training-the-model"><span
-class="header-section-number">4.8.3</span> Training the Model</h3>
+<h3 data-number="3.8.3" id="training-the-model"><span
+class="header-section-number">3.8.3</span> Training the Model</h3>
 <p>The <code>train_model</code> function updates the network’s
 parameters using experience replay:</p>
-<div class="sourceCode" id="cb8"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Train the model based on a batch of experience</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> train_model(agent, optimizer, batch_size, gamma):</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check that there are enough experiences in memory to sample a batch</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(agent.memory) <span class="op">&lt;</span> batch_size:</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Sample a minibatch of experiences from memory</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    minibatch <span class="op">=</span> random.sample(agent.memory, batch_size)</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Unpack the experiences</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    states, actions, rewards, next_states, dones <span class="op">=</span> <span class="bu">zip</span>(<span class="op">*</span>minibatch)</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Convert experience components to PyTorch tensors</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    states <span class="op">=</span> torch.from_numpy(np.vstack(states)).<span class="bu">float</span>()</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    actions <span class="op">=</span> torch.from_numpy(np.vstack(actions)).<span class="bu">long</span>()</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    rewards <span class="op">=</span> torch.from_numpy(np.vstack(rewards)).<span class="bu">float</span>()</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    next_states <span class="op">=</span> torch.from_numpy(np.vstack(next_states)).<span class="bu">float</span>()</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    dones <span class="op">=</span> torch.from_numpy(np.vstack(dones).astype(np.uint8)).<span class="bu">float</span>()</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the expected Q values from the neural network</span></span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    Q_expected <span class="op">=</span> agent.model(states).gather(<span class="dv">1</span>, actions)</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the Q value for the next states and get the max Q value for each next state</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    Q_targets_next <span class="op">=</span> agent.model(next_states).detach().<span class="bu">max</span>(<span class="dv">1</span>)[<span class="dv">0</span>].unsqueeze(<span class="dv">1</span>)</span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the target Q values for the current states using the Bellman equation</span></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    Q_targets <span class="op">=</span> rewards <span class="op">+</span> (gamma <span class="op">*</span> Q_targets_next <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> dones))</span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the loss between the expected Q values and the target Q values</span></span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> F.mse_loss(Q_expected, Q_targets)</span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Backpropagate the loss, update the network weights</span></span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    optimizer.zero_grad()</span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>    loss.backward()</span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    optimizer.step()</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Train the model based on a batch of experience</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> train_model(agent, optimizer, batch_size, gamma):</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check that there are enough experiences in memory to sample a batch</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(agent.memory) <span class="op">&lt;</span> batch_size:</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Sample a minibatch of experiences from memory</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    minibatch <span class="op">=</span> random.sample(agent.memory, batch_size)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Unpack the experiences</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    states, actions, rewards, next_states, dones <span class="op">=</span> <span class="bu">zip</span>(<span class="op">*</span>minibatch)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Convert experience components to PyTorch tensors</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    states <span class="op">=</span> torch.from_numpy(np.vstack(states)).<span class="bu">float</span>()</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    actions <span class="op">=</span> torch.from_numpy(np.vstack(actions)).<span class="bu">long</span>()</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    rewards <span class="op">=</span> torch.from_numpy(np.vstack(rewards)).<span class="bu">float</span>()</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    next_states <span class="op">=</span> torch.from_numpy(np.vstack(next_states)).<span class="bu">float</span>()</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    dones <span class="op">=</span> torch.from_numpy(np.vstack(dones).astype(np.uint8)).<span class="bu">float</span>()</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the expected Q values from the neural network</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    Q_expected <span class="op">=</span> agent.model(states).gather(<span class="dv">1</span>, actions)</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the Q value for the next states and get the max Q value for each next state</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    Q_targets_next <span class="op">=</span> agent.model(next_states).detach().<span class="bu">max</span>(<span class="dv">1</span>)[<span class="dv">0</span>].unsqueeze(<span class="dv">1</span>)</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the target Q values for the current states using the Bellman equation</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    Q_targets <span class="op">=</span> rewards <span class="op">+</span> (gamma <span class="op">*</span> Q_targets_next <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> dones))</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the loss between the expected Q values and the target Q values</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> F.mse_loss(Q_expected, Q_targets)</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Backpropagate the loss, update the network weights</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    optimizer.zero_grad()</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>    loss.backward()</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>    optimizer.step()</span></code></pre></div>
 <p>This function calculates the loss between the predicted and target
 Q-values and performs backpropagation to update the network weights.</p>
-<h3 data-number="4.8.4" id="logging-agents-performance"><span
-class="header-section-number">4.8.4</span> Logging Agent’s
+<h3 data-number="3.8.4" id="logging-agents-performance"><span
+class="header-section-number">3.8.4</span> Logging Agent’s
 Performance</h3>
 <p>Finally, a simple logging function keeps track of the agent’s
 learning progress:</p>
-<div class="sourceCode" id="cb9"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Log the performance metrics</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> log_performance(episode, total_reward, steps, epsilon):</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print out the episode number, total reward, number of steps and the epsilon value</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Episode: </span><span class="sc">{</span>episode<span class="sc">}</span><span class="ss">, Total Reward: </span><span class="sc">{</span>total_reward<span class="sc">}</span><span class="ss">, Steps: </span><span class="sc">{</span>steps<span class="sc">}</span><span class="ss">, Epsilon: </span><span class="sc">{</span>epsilon<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Log the performance metrics</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> log_performance(episode, total_reward, steps, epsilon):</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print out the episode number, total reward, number of steps and the epsilon value</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Episode: </span><span class="sc">{</span>episode<span class="sc">}</span><span class="ss">, Total Reward: </span><span class="sc">{</span>total_reward<span class="sc">}</span><span class="ss">, Steps: </span><span class="sc">{</span>steps<span class="sc">}</span><span class="ss">, Epsilon: </span><span class="sc">{</span>epsilon<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
 <p>This utility function prints information about the episode number,
 total rewards, steps, and the epsilon value.</p>
-<h3 data-number="4.8.5" id="example-code-execution"><span
-class="header-section-number">4.8.5</span> Example Code Execution</h3>
+<h3 data-number="3.8.5" id="example-code-execution"><span
+class="header-section-number">3.8.5</span> Example Code Execution</h3>
 <p>The main function demonstrates initializing the environment, agent,
 training, and logging:</p>
-<div class="sourceCode" id="cb10"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialize the Gridworld environment</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    gridworld <span class="op">=</span> Gridworld(width<span class="op">=</span><span class="dv">5</span>, height<span class="op">=</span><span class="dv">5</span>, start<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>), goal<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">4</span>), obstacles<span class="op">=</span>[(<span class="dv">1</span>, <span class="dv">1</span>), (<span class="dv">2</span>, <span class="dv">2</span>), (<span class="dv">3</span>, <span class="dv">3</span>)])</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define action mapping that maps action indices to movements</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    action_mapping <span class="op">=</span> [(<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>), (<span class="dv">1</span>, <span class="dv">0</span>), (<span class="dv">0</span>, <span class="dv">1</span>), (<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>)]  <span class="co"># Up, Right, Down, Left</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the input size based on the environment&#39;s state space</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    input_size <span class="op">=</span> gridworld.width <span class="op">*</span> gridworld.height</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The output size is the number of possible actions</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    output_size <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialize the DQN agent</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    agent <span class="op">=</span> DQNAgent(input_size, output_size)</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define an optimizer for the neural network (Adam optimizer with a learning rate of 0.001)</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    optimizer <span class="op">=</span> torch.optim.Adam(agent.model.parameters(), lr<span class="op">=</span><span class="fl">0.001</span>)</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Batch size for experience replay</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    batch_size <span class="op">=</span> <span class="dv">32</span></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Discount factor for future rewards</span></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    gamma <span class="op">=</span> <span class="fl">0.99</span></span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Function to convert a state to a tensor for neural network input</span></span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> state_to_tensor(state, grid_size<span class="op">=</span><span class="dv">5</span>):</span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Create a one-hot encoded vector for the state</span></span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>        state_vector <span class="op">=</span> torch.zeros(grid_size <span class="op">*</span> grid_size, dtype<span class="op">=</span>torch.float32)</span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>        state_vector[state] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> state_vector</span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Main training loop</span></span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> episode <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>):</span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Reset the environment at the start of each episode</span></span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>        state <span class="op">=</span> gridworld.reset()</span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Initialize total reward and steps counter</span></span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>        total_reward <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>        done <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>        steps <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Loop for each step in the episode</span></span>
-<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> <span class="kw">not</span> done:</span>
-<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Convert state to tensor format</span></span>
-<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>            state_vector <span class="op">=</span> state_to_tensor(state)</span>
-<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Select an action using the DQN agent&#39;s policy</span></span>
-<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>            action <span class="op">=</span> agent.act(state_vector)</span>
-<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Take the action in the environment and observe the next state and reward</span></span>
-<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>            next_state, reward, done <span class="op">=</span> gridworld.step(action_mapping[action])</span>
-<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Convert the next state to tensor format</span></span>
-<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>            next_state_vector <span class="op">=</span> state_to_tensor(next_state)</span>
-<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Remember the experience</span></span>
-<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>            agent.remember(state_vector, action, reward, next_state_vector, done)</span>
-<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Move to the next state</span></span>
-<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a>            state <span class="op">=</span> next_state</span>
-<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Update the total reward</span></span>
-<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a>            total_reward <span class="op">+=</span> reward</span>
-<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Increment the step counter</span></span>
-<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>            steps <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Train the model with experiences from memory</span></span>
-<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a>            train_model(agent, optimizer, batch_size, gamma)</span>
-<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a>        <span class="co"># After the episode, decay epsilon for less exploration in future episodes</span></span>
-<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a>        agent.update_epsilon()</span>
-<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Log the performance metrics for the episode</span></span>
-<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a>        log_performance(episode, total_reward, steps, agent.epsilon)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialize the Gridworld environment</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    gridworld <span class="op">=</span> Gridworld(width<span class="op">=</span><span class="dv">5</span>, height<span class="op">=</span><span class="dv">5</span>, start<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>), goal<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">4</span>), obstacles<span class="op">=</span>[(<span class="dv">1</span>, <span class="dv">1</span>), (<span class="dv">2</span>, <span class="dv">2</span>), (<span class="dv">3</span>, <span class="dv">3</span>)])</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define action mapping that maps action indices to movements</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    action_mapping <span class="op">=</span> [(<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>), (<span class="dv">1</span>, <span class="dv">0</span>), (<span class="dv">0</span>, <span class="dv">1</span>), (<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>)]  <span class="co"># Up, Right, Down, Left</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the input size based on the environment&#39;s state space</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    input_size <span class="op">=</span> gridworld.width <span class="op">*</span> gridworld.height</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The output size is the number of possible actions</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    output_size <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialize the DQN agent</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    agent <span class="op">=</span> DQNAgent(input_size, output_size)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define an optimizer for the neural network (Adam optimizer with a learning rate of 0.001)</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    optimizer <span class="op">=</span> torch.optim.Adam(agent.model.parameters(), lr<span class="op">=</span><span class="fl">0.001</span>)</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Batch size for experience replay</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    batch_size <span class="op">=</span> <span class="dv">32</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Discount factor for future rewards</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    gamma <span class="op">=</span> <span class="fl">0.99</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Function to convert a state to a tensor for neural network input</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> state_to_tensor(state, grid_size<span class="op">=</span><span class="dv">5</span>):</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Create a one-hot encoded vector for the state</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>        state_vector <span class="op">=</span> torch.zeros(grid_size <span class="op">*</span> grid_size, dtype<span class="op">=</span>torch.float32)</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>        state_vector[state] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> state_vector</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Main training loop</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> episode <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>):</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Reset the environment at the start of each episode</span></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>        state <span class="op">=</span> gridworld.reset()</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Initialize total reward and steps counter</span></span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>        total_reward <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>        done <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>        steps <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Loop for each step in the episode</span></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> <span class="kw">not</span> done:</span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Convert state to tensor format</span></span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>            state_vector <span class="op">=</span> state_to_tensor(state)</span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Select an action using the DQN agent&#39;s policy</span></span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>            action <span class="op">=</span> agent.act(state_vector)</span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Take the action in the environment and observe the next state and reward</span></span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>            next_state, reward, done <span class="op">=</span> gridworld.step(action_mapping[action])</span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Convert the next state to tensor format</span></span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>            next_state_vector <span class="op">=</span> state_to_tensor(next_state)</span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Remember the experience</span></span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a>            agent.remember(state_vector, action, reward, next_state_vector, done)</span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Move to the next state</span></span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a>            state <span class="op">=</span> next_state</span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Update the total reward</span></span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a>            total_reward <span class="op">+=</span> reward</span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Increment the step counter</span></span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>            steps <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Train the model with experiences from memory</span></span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a>            train_model(agent, optimizer, batch_size, gamma)</span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a>        <span class="co"># After the episode, decay epsilon for less exploration in future episodes</span></span>
+<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a>        agent.update_epsilon()</span>
+<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Log the performance metrics for the episode</span></span>
+<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a>        log_performance(episode, total_reward, steps, agent.epsilon)</span></code></pre></div>
 <p>Within each episode, the agent selects actions, updates its Q-values,
 and logs its performance.</p>
 <hr />

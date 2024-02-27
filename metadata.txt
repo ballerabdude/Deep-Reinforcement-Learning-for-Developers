@@ -2,4 +2,7 @@
 title: Deep Reinforcement Learning for Developers
 author: Abdul Hagi
 lang: en-US
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{Times New Roman}
 ---

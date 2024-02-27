@@ -4,6 +4,20 @@
 
 Q-Learning is a foundational model-free reinforcement learning algorithm that enables agents to learn optimal policies for decision-making without knowing the dynamics of the environment they operate in. By interacting with the environment, the agent learns to associate actions with rewards and discovers the best strategy through trial and error.
 
+The term "Model-free" in the context of Q-Learning refers to a specific approach within reinforcement learning, characterized by:
+
+1. No Environment Dynamics Knowledge: In model-free Q-Learning, the algorithm does not require prior knowledge of the environment's dynamics. This means it does not need to know how the environment will respond to its actions, including state transitions and expected outcomes.
+
+2. Learning Through Experience: The agent learns by interacting with the environment, taking actions, observing outcomes, and updating its knowledge based on the results. This is often done through a Q-table, mapping state-action pairs to expected rewards.
+
+3. Flexibility and Generality: Model-free methods are applicable to a wide range of environments, especially useful when the environment is complex, unpredictable, or not fully understood.
+
+4. Exploration vs. Exploitation: A key challenge in model-free learning is balancing exploration (trying new actions for more information) and exploitation (using known information to maximize rewards), enabling the algorithm to learn effectively while performing optimally.
+
+
+This approach allows agents to operate effectively in environments where the dynamics are unknown or too complex to model.
+
+
 ### Understanding Q-values
 
 At the core of Q-Learning are the Q-values, which represent the expected cumulative reward of taking an action in a given state and following the optimal policy thereafter. The Q-value function is denoted by Q(s, a), where 's' stands for state and 'a' for action.
@@ -12,17 +26,40 @@ At the core of Q-Learning are the Q-values, which represent the expected cumulat
 
 The Q-Learning algorithm can be summarized in several key steps:
 
-1. Initialize the Q-values table (Q-table) arbitrarily for all state-action pairs.
+1. Initialize the Q-values table (Q-table) arbitrarily for all state-action pairs. The Q-table is generally initialized with zeros.
 2. Observe the current state `s`.
 3. Choose an action `a` for the state `s` based on a policy derived from the Q-values (e.g., ε-greedy).
-4. Take the action `a`, and observe the outcome state `s'` and reward `r`.
+   - A "policy" in this context is a strategy or rule that the agent follows to decide which action to take in a given state. It guides the action selection process based on the current Q-values, balancing exploration (trying new actions) and exploitation (using known valuable actions).
+4. Take the action `a`, and observe the outcome state `s'`(Pronounced "S Prime") and reward `r`.
+   - The outcome state `s'` refers to the new state the agent finds itself in after taking action `a`. It represents the next state in the environment as a result of the agent's action.
+   - The reward `r` is a feedback signal received from the environment. It indicates how good or bad the action taken was, based on the environment's rules. Rewards guide the agent to learn which actions are beneficial in achieving its goals.
+
 5. Update the Q-value for the state-action pair based on the formula:
    
    Q(s, a) = Q(s, a) + α * [r + γ * maxQ(s', a') - Q(s, a)]
    
-   where:
-   - α (alpha) is the learning rate (0 < α ≤ 1)
-   - γ (gamma) is the discount factor (0 ≤ γ < 1)
+    The formula is a key part of reinforcement learning, specifically in Q-learning. It's used for updating the value of the Q-function, which estimates the rewards for a given state-action pair. Below is the breakdown of each component:
+
+    1. **Q(s, a)**: 
+    - Represents the current estimate of the rewards that can be gained by taking action 'a' in state 's'.
+
+    2. **α (Alpha)**:
+    - The learning rate.
+    - Determines to what extent the newly acquired information overrides the old information.
+
+    3. **r**:
+    - The reward received after taking action 'a' in state 's'.
+
+    4. **γ (Gamma)**:
+    - The discount factor.
+    - Determines the importance of future rewards.
+
+    5. **max Q(s', a')**:
+    - Represents the maximum predicted reward that can be achieved in the new state 's' after taking action 'a'.
+
+    6. **Q(s, a) [Second Occurrence]**:
+    - The old value of the Q-function, which is being updated.
+
 6. Set the state `s` to the new state `s'`.
 7. If the end of the episode is not reached, go back to step 3.
 8. Repeat these steps for many episodes to train the agent.
@@ -35,16 +72,10 @@ The components of the Q-learning algorithm are:
 - **Discount Factor (γ)**: Measures the importance of future rewards over immediate ones.
 - **Reward (r)**: The signal received from the environment to evaluate the last action.
 
-The formula Q(s, a) = Q(s, a) + α * [r + γ * maxQ(s', a') - Q(s, a)] is used to update the Q-value of the state-action pair. Let's break this down:
+The formula in english:
+"The value of Q at state 's' and action 'a' is updated to be equal to its old value plus the product of the learning rate, alpha, and the difference between the immediate reward 'r' and the discounted maximum future reward from the new state 's' prime and any action 'a' prime, minus the old Q value at state 's' and action 'a'. In simpler terms, this formula adjusts the Q value for a given state-action pair based on the immediate reward received, the best possible future rewards, and how much we value future rewards compared to immediate ones."
 
-- Q(s, a): This is the old or previous Q-value of the pair (state, action).
-- r: This is the immediate reward got after performing the action 'a' in state 's'.
-- maxQ(s', a'): This is the maximum Q-value possible for the next state 's' across all possible actions. It is picked based on the current knowledge the agent has (i.e., based on the current Q-table).
-- γ * maxQ(s', a'): This term is the discounted maximum future reward from the next state 's'. The discount factor 'γ' ensures the agent cares more about immediate reward over distant or future reward; if 'γ' is close to 1 the agent will consider future rewards significantly but if 'γ' is close to 0 the agent cares mostly about immediate rewards.
-- [r + γ * maxQ(s', a') - Q(s, a)]: This is the difference between the learned value and the old value; it is sometimes termed as the Temporal Difference error or simply TD error.
-- α * [r + γ * maxQ(s', a') - Q(s, a)]: The learning rate 'α' is applied to the TD error to moderate the update. If 'α' is closer to 1, learning is faster as it depends more on the newest experience; if 'α' is closer to 0, learning is slower as it leverages more on cumulative past experiences.
-
-So, this entire formula represents the idea that the Q-value for a given state-action pair is updated by the learning rate 'α' times the difference between the learned value (reward plus discounted future value) and the old value. This guides the agent to better actions as it navigates and learns from its environment.
+This description conveys the intent of the formula, which is to update the Q value based on new information about rewards and future possibilities.
 
 ### Convergence of Q-Learning
 
@@ -66,7 +97,7 @@ We'll use the Gridworld environment from Chapter 1, which provides the necessary
 
 #### Implementing Q-Learning Algorithm
 
-We will implement the Q-Learning algorithm in a Python script called `q_learning_agent.py`. The script will interface with the Gridworld class to train the agent.
+We will implement the Q-Learning algorithm in a Python script called q_learning_agent.py. The script will interface with the Gridworld class to train the agent.
 
 #### Defining States and Actions in the Grid World
 
@@ -78,7 +109,7 @@ The agent will update its Q-values based on the rewards it receives from the env
 
 ---
 
-Now, let's begin our project with the `q_learning_agent.py` script.
+Now, let's begin our project with the q_learning_agent.py script.
 
 ```python
 # q_learning_agent.py
