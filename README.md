@@ -1,1 +1,5 @@
 # Deep-Reinforcement-Learning-for-Developers
+
+Over my winter break, I wanted to learn more about deep reinforcement learning, but found it challenging. I watched some videos and read articles to understand the fundamentals, but as a developer I was most interested in learning how to apply deep reinforcement learning in my own projects. I didn't care as much about the theory. Unfortunately, I couldn't find any resources that taught deep reinforcement learning from a practical developer's perspective through project-based learning, which is how I prefer to learn.
+
+So I decided to write my own introductory book on deep reinforcement learning for developers, with a project-based approach. I used ChatGPT to generate most of the content. After completing the first three chapters, I felt I had a basic grasp of deep reinforcement learning concepts and how to apply them in projects. The experience helped me gain practical knowledge of deep reinforcement learning through creating my own project-focused guide.
